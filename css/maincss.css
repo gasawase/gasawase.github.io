@@ -308,10 +308,11 @@ nav{
 }
 
 .aboutMe img{
-    width: 20%;
+    width: 17%;
     display: block;
     margin-left: auto;
     margin-right: auto;
+    border-radius: 20px;
 }
 
 .aboutMeExplan{
@@ -319,20 +320,6 @@ nav{
     font-family: var(--main-font);
     color: var(--main-white);
     margin-top: 2%;
-}
-
-figcaption{
-    font-size: 10px;
-    font-family: var(--main-font);
-    color: var(--main-white);
-}
-
-figcaption a{
-    color: var(--main-white);    
-}
-
-figcaption a:hover{
-    font-size: 20px;
 }
 
 .aboutMeExplan h1{
