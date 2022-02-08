@@ -4,10 +4,14 @@
     --main-font: 'Comfortaa', cursive;
 
     --deep-orange-red: #ee745f;
+    --chardonnay: #FFC06E;
     --main-white: #fafafa;
     --navy-blue: #39526c;
+    --medium-aquamarine: #75CE9F;
     --light-orange: #f08d5a;
+    --madong: #BDD99E;
     --mint-green: #68c0ad;
+    --jade: #01A66F;
     --blue-button: #7bd5e8;
     --deep-blue: #33c1c9;
     --light-grey: #242424;
@@ -36,7 +40,7 @@ nav{
 }
 
 .main-hero{
-    background-color: var(--deep-orange-red);
+    background-color: var(--chardonnay);
 }
 
 .new-title{
@@ -64,7 +68,7 @@ nav{
   }
   
 .skills{
-    background-color: var(--light-orange);
+    background-color: var(--madong);
 }
 
 .skills-spacing{
@@ -123,7 +127,7 @@ nav{
 }
 
 .pastWorksTop{
-    background-color: var(--navy-blue);
+    background-color: var(--medium-aquamarine);
     font-family: var(--main-font);
     height: 100%;
 }
@@ -241,7 +245,7 @@ nav{
 }
 
 .inProduction{
-    background-color: var(--mint-green);
+    background-color: var(--jade);
     font-family: var(--main-font);
     height: 100%;
 }
