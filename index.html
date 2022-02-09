@@ -11,6 +11,7 @@ and open the template in the editor.
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel ="stylesheet" id="main" href="css/maincss.css" type="text/css"/>
         <link href="https://fonts.googleapis.com/css?family=Amiri|Julius+Sans+One|Quattrocento|Comfortaa" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Baskervville&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.4/css/bulma.min.css">
         <link rel="stylesheet" href="css/animations.css">
         <link rel="shortcut icon" type="image/png" href="assets/phoenix logo copy 2.png"/>
@@ -62,7 +63,7 @@ and open the template in the editor.
             <!-- Skills -->
             <section class="skills section" id="skillsSec">
                 <div class="container">
-                        <p class="has-text-centered is-size-3 has-text-weight-normal technicalSkills">Skills</p>
+                        <p class="technicalSkills has-text-centered has-text-weight-normal">Skills</p>
                     <div class="columns">
                         <div class="column is-4 is-offset-2">
                             <div class="card">
@@ -109,26 +110,21 @@ and open the template in the editor.
             <section class="hero pastWorksTop" id="pastWorksSec">
                 <div class="hero-body">
                     <div class="container">
+                        <div class="pastWorksTitle">
+                            Works
+                        </div>
+                        <div class="pastWorksExplan">       <!--this is the explanation-->
+                            Here lie my past projects that I've worked on and projects I'm working on at the moment.
+                            For more work, check me out on GitHub!
+                            <button class="button gitButt">
+                                <span class="icon">
+                                    <i class="fab fa-github"></i>
+                                </span>
+                                <span>GitHub</span>
+                            </button>
+                        </div>                        
                         <div class="columns">
-                            <div class="column is-one-third"> <!--this is the FIRST COLUMN -->
-                                <div class="pastWorksTitle">
-                                    Works
-                                </div>
-                                <div class="pastWorksExplan">       <!--this is the explanation-->
-                                    Here lie my past projects that I've worked on and projects I'm working on at the moment.
-                                    <br>
-                                    <br>
-                                    For more work, find me on the sites below.
-                                    <div class="button gitButt">
-                                        <a href="https://github.com/gasawase">GitHub</a>
-                                        <br>
-                                    </div>
-                                    <div class="button gitButt">
-                                        <a href="https://constantmusingsofaconfusedartist.weebly.com/">My Blog</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="column is-3">
+                            <div class="column is-2">
                                 <div class="card secondCard" id="logo">
                                     <div class="card-image">
                                         <figure class="image is-square">
@@ -136,62 +132,41 @@ and open the template in the editor.
                                         </figure>
                                     </div>
                                     <div class="card-content">
-                            
                                         <div class="content">
-                                            I designed this logo for a game I’m designing with peers. The game revolves around story I’m writing, The Phoenix Project, hence the phoenix
+                                            ADD SOMETHING
                                         <br>
-                            
-                                        </div>
-                                    </div>
-                                </div>
-                                <br>
-                                <div class="card secondCard" id="notebook">
-                                        <div class="card-image">
-                                            <figure class="image is-square">
-                                                <img src="assets/notepad.jpg" alt="Python Project">
-                                        </figure>
-                                    </div>
-                                    <div class="card-content">
-                                
-                                        <div class="content">
-                                            ADD SOMETHING HERE
-                                            <br>
-                                
                                         </div>
                                     </div>
                                 </div>
                              </div>
-                             <div class="column is-3">
-                                <div class="card secondCard" id="bp">
+                        </div>
+                        <div class="columns">
+                             <div class="column is-5">
+                                <div class="card secondCard" id="FirstGameVideo">
                                     <div class="card-image">
-                                        <figure class="image is-square">
-                                            <img src="assets/blackpink and big bang copy.jpg" alt="Blackpink and Big Bang Collaboration Album">
+                                        <figure class="image is-fullwidth">
+                                            <br>
+                                            <iframe src="https://www.youtube.com/embed/l_fnf8gwDcE" allowfullscreen></iframe>
                                         </figure>
-                                    </div>
-                                    <div class="card-content">
-                                
-                                        <div class="content">
-                                            I designed this cover for a collaboration between two artists, including merging their logos.
-                                        <br>
-                                
-                                        </div>
                                     </div>
                                 </div>
                                 <br>
-                                <div class="card secondCard" id="visual-novel">
-                                    <div class="card-image">
-                                        <figure class="image is-square">
-                                            <img src="assets/visual novel.jpg" alt="Visual Novel">
-                                        </figure>
-                                    </div>
-                                    <div class="card-content">
-                                    
-                                        <div class="content">
-                                            ADD SOMETHING HERE
-                                            <br>
-                                    
-                                        </div>
-                                    </div>
+                            </div>
+                            <div class="column is-4 gameExample">
+                                <br>
+                                <div class="gameExampleHeader">
+                                    fsfgsfgsdfgf
+                                </div>
+                                For this project
+                            </div>
+                        </div>
+                        <div class="columns">
+                            <div class="column is-5">
+                                <div class="card secondCard" id="ShadersVideo">
+                                    <figure class="shaderVideo image is-fullwidth">
+                                        <br>
+                                        <iframe src="https://www.youtube.com/embed/rehj560HJws" allowfullscreen></iframe>
+                                    </figure>
                                 </div>
                             </div>
                         </div>
@@ -242,11 +217,6 @@ and open the template in the editor.
                                 </div>
                                 <div class="productExplan">
                                     These are the projects that I have either started or plan to start in the near future.
-                                    <br>
-                                    <br>
-                                    For my plan of attack and more updates, visit the link below.
-                                    <br>
-                                    <a href="https://constantmusingsofaconfusedartist.weebly.com/" target="_blank" class="button is-hovered gitButt">My Blog</a>
                                 </div>
                             </div>                           
                         </div>
