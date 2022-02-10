@@ -202,15 +202,36 @@ iframe {
 	width: 50%;
 }
 
-.firstCard, .secondCard{
+.videoCard{
 	border-radius: 6px;
     padding: 10px;
-    height: 400px;
+    height: auto;
+    width: 600px;
     text-align: center;
+    margin-left: 100px;
+    
 }
 
-#logo, #PortfolioWalkthroughCard, #ShadersVideo :hover{
+#WorksVideos :hover{
     max-height: 450px;
+}
+
+.video-con {
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 50px;
+    height: 0;
+    overflow: hidden;
+}
+
+.video-con iframe,
+.video-con object,
+.video-con embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 }
 
 .secondCard:hover {
@@ -276,68 +297,6 @@ iframe {
     border: 2px; 
     border-radius: 15px;
     background-color: var(--main-white);
-}
-
-.inProduction{
-    background-color: var(--gum-leaf);
-    font-family: var(--second-font);
-    height: 100%;
-}
-
-.productTitle{
-    font-size: var(--title-font-size);
-    font-family: var(--second-font);
-    color: var(--main-white);
-    text-align: right;
-    margin-right: 30px !important;
-}
-
-.productExplan{
-    font-size: 20px;
-    font-family: var(--second-font);
-    color: var(--main-white);
-    text-align: right;
-}
-
-.productProd{
-    font-size: 15px;
-    font-family: var(--second-font);
-    color: var(--light-grey);
-    border-style: solid;
-    border: 2px; 
-    border-radius: 15px;
-    background-color: var(--main-white);
-    padding: 4%;
-    height: 98%;
-    width: 100%;
-}
-
-.productProd img{
-    width: 100%;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.inProduction  .columns{
-    margin-left: 190px;
-}
-
-.inProduction .prodCol{
-    width: 40%;
-    margin-left: 2% !important;
-}
-
-.inProduction .content{
-    text-align: center;
-}
-
-.novel{
-    padding-top: 17% !important;
-}
-
-.novelExplan{
-    padding-top:15%;
 }
 
 .aboutMe{
