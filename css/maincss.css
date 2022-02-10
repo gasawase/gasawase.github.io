@@ -252,11 +252,11 @@ iframe {
 	max-height: 500px;
 }
 
-.gameExampleHeader{
+.ExplainHeader{
     font-size: var(--title-font-size);
 }
 
-.gameExample{
+.Explain{
     font-size: 20px;
     font-family: var(--second-font);
     color: var(--main-white);
