@@ -25,26 +25,23 @@ and open the template in the editor.
                     <span aria-hidden="true"></span>
                     <span aria-hidden="true"></span>
                 </a>
-                <div id="navbarBasicExample" class="navbar-menu">
-                    <div class="navbar-end">
-                        <a href="#skillsSec" class="navbar-item">
-                            Skills
-                        </a>
-                            
-                        <a href="#pastWorksSec" class="navbar-item">
-                            Past Work
-                        </a>
-                        <a href="#inProductionSec" class="navbar-item">
-                            In Production
-                        </a>
-                        <a href="#aboutMeSec" class="navbar-item">
-                            About Me
-                        </a>
-                        <a href="mailto:summer.gasaway@gmail.com" class="navbar-item">
-                            <span class="button custButton" id="buttButt">Want to Talk?</span>
-                        </a>
-                       
-                    </div>
+                    <nav class="level navbar-menu" id="navbarBasicExample">
+                            <p class="level-item has-text-centered">
+                                <img src="assets/phoenix%20logo%20copy%202.png" alt="PhoenixLogo" style="height: 60px;">
+                            </p>
+                            <a href="#skillsSec" class="navbar-item level-item has-text-centered">
+                                Skills
+                            </a>
+                            <a class="level-item has-text-centered navbar-item" href="#pastWorksSec">
+                                Work
+                            </a>
+                            <a class="level-item has-text-centered navbar-item" href="aboutMESec">
+                                About Me
+                            </a>
+                            <a href="mailto:summer.gasaway@gmail.com" class="navbar-item">
+                                <span class="button custButton" id="buttButt">Want to Talk?</span>
+                            </a>
+                    </nav>
                 </div>
             </nav>
         </section>
@@ -52,9 +49,12 @@ and open the template in the editor.
             <section class="hero main-hero">
                 <div class="hero-body main-hero-body">
                     <div class="container is-fluid">
-                        <img src="assets/phoenix logo copy 2.png" alt="Phoenix Logo">
-                        <div class="new-title has-text-centered">
-                            Programmer + Artist = Summer Gasaway
+                        <div class="new-title has-text-left">
+                            &bull; Project Lead &bull; Technical Designer &bull; Game Engine Developer &bull;
+                        </div>
+                        <div class="new-title name">
+                            <img class="topPicOfMe" src="assets/cropped bw.jpg" alt="Picture of Me">
+                            Summer Gasaway
                         </div>
                     </div>
                 </div>
@@ -65,7 +65,7 @@ and open the template in the editor.
                 <div class="container">
                         <p class="technicalSkills has-text-centered has-text-weight-normal">Skills</p>
                     <div class="columns">
-                        <div class="column is-4 is-offset-2">
+                        <div class="column is-4">
                             <div class="card">
                                 <div class="card-content has-text-centered">
                                     <div class="content">
@@ -74,8 +74,7 @@ and open the template in the editor.
                                             <li class="list-item">I love programming because I find it is synonymous to a
                                                 puzzle; I enjoy dissecting and analyzing all aspects of the code in order to
                                                 create something new which is why I'm itching to learn as much as I can.</li>
-                                            <li class="list-item has-text-weight-semibold	">Languages</li>
-                                            </li>
+                                            <li class="list-item has-text-weight-semibold">Languages</li>
                                             <li class="list-item">HTML, CSS, Java, Javascript, Linux Bash Shell, Python, C#, SQL
                                             </li>
                                         </ul>
@@ -94,6 +93,24 @@ and open the template in the editor.
                                                 antsy if I don’t make something after a while. I can’t help but get my hands on
                                                 anything that allows my creativity loose.</li>
                                             <li class="list-item has-text-weight-semibold	">Party Members</li>
+                                            <li class="list-item">Photoshop, Maya, Adobe Creative Suite, Microsoft Office Suite
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="column is-4">
+                            <div class="card">
+                                <div class="card-content has-text-centered">
+                                    <div class="content">
+                                        <h3>Creative </h3>
+                                        <ul class="skills-list">
+                                            <li class="list-item">Designing and creating is in my blood to a point where I get
+                                                antsy if I don’t make something after a while. I can’t help but get my hands on
+                                                anything that allows my creativity loose.</li>
+                                            <li class="list-item has-text-weight-semibold	">Party Members</li>
                                             </li>
                                             <li class="list-item">Photoshop, Maya, Adobe Creative Suite, Microsoft Office Suite
                                             </li>
@@ -102,6 +119,7 @@ and open the template in the editor.
                                 </div>
                             </div>
                         </div>
+                        
                     </div>
                 </div>
             </section>
@@ -114,7 +132,6 @@ and open the template in the editor.
                             Works
                         </div>
                         <div class="pastWorksExplan">       <!--this is the explanation-->
-                            Here lie my past projects that I've worked on and projects I'm working on at the moment.
                             For more work, check me out on GitHub!
                             <button class="button gitButt">
                                 <span class="icon">
@@ -129,8 +146,8 @@ and open the template in the editor.
                         <div class="column is-5">
                             <div class="card videoCard" id="WorksVideos">
                                 <div class="card-image">
-                                    <figure class="video-con image is-fullwidth">
-                                        <iframe width="560" height="315" src="https://www.youtube.com/embed/l_fnf8gwDcE" allowfullscreen></iframe>
+                                    <figure class="underConstructionWorks image "> <!--is-fullwidth-->
+                                        <img width="560" height="315" src="assets/underConstruction.jpg" alt="Under Construction with Yellow Tape" allowfullscreen>
                                     </figure>
                                 </div>
                             </div>
@@ -202,10 +219,10 @@ and open the template in the editor.
                         <img src="assets/cropped bw.jpg" alt="Picture of Me">
                         </figure>
                         <div class="aboutMeExplan has-text-centered">
-                            Hey! My name is Summer and I’m an Information Technology student with a focus in Game Design. I love playing video games and breaking them apart to see how they work. My passion for creating is often confused for stubborness because of how dedicated I am to making my projects the best they can be. This is why I will also be pursuing a Masters in Business Administration, so that I will be able to help others create the best project they can make as well.
+                            REWORK AUTHOR BIO
                             <br>
                             <br>
-                            <h1>I am currently working for the University via a Work Study position,  but I am eager to move onto the next step.</h1>
+                            <h1>I am currently working for my university's Simulation and Virtual Environments Research group as a Unity developer, but I am eager to move onto the next step.</h1>
                         </div>
                     </div>
                 </div>
