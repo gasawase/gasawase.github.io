@@ -182,6 +182,7 @@ iframe {
     font-size: var(--title-font-size);
     font-family: var(--second-font);
     color: var(--main-white);
+    margin-left: 100px;
 }
 
 .pastWorksExplan{
