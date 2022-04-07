@@ -67,12 +67,23 @@ nav{
     margin-right: 2%;
 }
 
-.custButton{ 
-    background-color: var(--blue-button)!important;
-    color: var(--main-white)!important;
+.custButton{
+    background-color: var(--elm02) !important;
+    color: var(--main-white) !important;
     margin-top: 8px;
     margin-bottom: 8px;
     padding: 5px 10px 5px 10px;
+}
+
+.button {
+    -webkit-transition: all 200ms ease-in; !important
+    -webkit-transform: scale(1.2); !important
+    -ms-transition: all 200ms ease-in; !important
+    -ms-transform: scale(1.2); !important
+    -moz-transition: all 200ms ease-in; !important
+    -moz-transform: scale(1.2); !important
+    transition: all 200ms ease-in; !important
+    transform: scale(1.2); !important
 }
 
 .main-hero{
@@ -90,12 +101,22 @@ nav{
     margin-right: auto;
     width: 20%;
     display: block;
+    border-radius: 20px;
 }
 
 iframe {
     /*height: 500px !important;
     width: 100%; */
     max-width: 100%;
+}
+
+a.button {
+    -webkit-appearance: button;
+    -moz-appearance: button;
+    appearance: button;
+
+    text-decoration: none;
+    color: initial;
 }
 
 .card-image-vimeo{
@@ -276,19 +297,19 @@ iframe {
     margin-top: -1%;
 }
 
-/*.gitButt{
+.gitButt{
     width:150px;
     color: var(--light-grey);
     margin-top: 0px;
     margin-bottom: 10px;
     padding: 10px 10px 10px 10px !important;
-}*/
+}
 
 .gitButt:hover{
     -webkit-transition: all 200ms ease-in;
-    -webkit-transform: scale(1.5);
+    -webkit-transform: scale(1.1);
     -ms-transition: all 200ms ease-in;
-    -ms-transform: scale(1.2);   
+    -ms-transform: scale(1.1);   
     -moz-transition: all 200ms ease-in;
     -moz-transform: scale(1);
     transition: all 200ms ease-in;
