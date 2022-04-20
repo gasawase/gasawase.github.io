@@ -15,7 +15,8 @@ and open the template in the editor.
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.4/css/bulma.min.css">
         <link rel="stylesheet" href="css/animations.css">
         <link rel="shortcut icon" type="image/png" href="assets/phoenix logo copy 2.png"/>
-    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+        <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+        <script src="js/main.js"></script>
     </head>
     <body>
         <section>
@@ -38,7 +39,7 @@ and open the template in the editor.
                             <a class="level-item has-text-centered navbar-item" href="#aboutMeSec">
                                 Description
                             </a>
-                            <a href="mailto:summer.gasaway@gmail.com" class="navbar-item">
+                            <a href="mailto:summer.gasaway@gmail.com" class="level-item has-text-centered navbar-item">
                                 <span class="button custButton" id="buttButt">Want to Talk?</span>
                             </a>
                     </nav>
@@ -134,7 +135,7 @@ and open the template in the editor.
                     <!--Currently Working on Video Card-->
                     <div class="columns pastWorkSection">
                         <div class="column is-5">
-                            <div class="card videoCard" id="WorksVideos">
+                            <div class="card videoCard WorksVideos">
                                 <div class="card-image">
                                     <figure class="video-con image is-fullwidth">
                                         <img width="560" height="315" src="assets/currentlyWorkingOn.png" >
@@ -157,10 +158,10 @@ and open the template in the editor.
                         </div>
                     </div>
                     
-                    <!--Portfolio Walkthrough Video Card-->
+                    <!--Coming Soon Walkthrough Video Card-->
                     <div class="columns pastWorkSection">
                         <div class="column is-5">
-                            <div class="card videoCard" id="WorksVideos">
+                            <div class="card videoCard WorksVideos">
                                 <div class="card-image">
                                     <figure class="video-con image is-fullwidth">
                                         <img width="560" height="315" src="assets/underConstruction.jpg" >
@@ -182,11 +183,39 @@ and open the template in the editor.
                             scripted events happen and more.
                         </div>
                     </div>
+
+                    <div class = "card slideshow-card">
+                        <div class = "testing-slideshow-area">
+                            <div class="slideshow-container">
+                                <div class="mySlides fade">
+                                    <div class="numbertext">1 / 3</div>
+                                    <img class = "slideshow-img" src="assets/underConstruction.jpg" alt = "" style = "height: 100%; width: 100%">
+                                </div>
+                                <div class="mySlides fade">
+                                    <div class="numbertext">2 / 3</div>
+                                    <img class = "slideshow-img" src="assets/underConstruction.jpg" alt = "" style = "height: 100%; width: 100%">
+                                </div>
+                                <div class="mySlides fade">
+                                    <div class="numbertext">3 / 3</div>
+                                    <img class = "slideshow-img" src="assets/currentlyWorkingOn.png" alt = "" style = "height: 100%; width: 100%">
+                                </div>
+                                <br>
+                                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                            </div>
+                            <div style="text-align:center">
+                                <span class="dot" onclick="currentSlide(1)"></span>
+                                <span class="dot" onclick="currentSlide(2)"></span>
+                                <span class="dot" onclick="currentSlide(3)"></span>
+                            </div>
+                        </div>                       
+                    </div>
+
                     
                     <!--Shader Video Card-->
                     <div class="columns pastWorkSection">
                              <div class="column is-5">
-                                <div class="card videoCard" id="WorksVideos">
+                                <div class="card videoCard WorksVideos">
                                     <div class="card-image-vimeo">
                                         <iframe src="https://player.vimeo.com/video/669235774?h=d738e21854&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" 
                                                 allow="autoplay; fullscreen; picture-in-picture" allowfullscreen 
@@ -296,6 +325,34 @@ and open the template in the editor.
                       document.body.scrollTop = 0; // For Safari
                       document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
                 }
+
+            var slideIndex = 1;
+            showSlides(slideIndex);
+            function plusSlides(n) {
+                showSlides(slideIndex += n);
+            }
+            function currentSlide(n) {
+                showSlides(slideIndex = n);
+            }
+            function showSlides(n) {
+                var i;
+                var slides = document.getElementsByClassName("mySlides");
+                var dots = document.getElementsByClassName("dot");
+                if(n > slides.length) {
+                    slideIndex = 1
+                }
+                if(n < 1) {
+                    slideIndex = slides.length
+                }
+                for(i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";
+                }
+                for(i = 0; i < dots.length; i++) {
+                    dots[i].className = dots[i].className.replace(" active", "");
+                }
+                slides[slideIndex - 1].style.display = "block";
+                dots[slideIndex - 1].className += " active";
+            }
             </script>
     </body>
     <footer class="footer content has-text-centered">
