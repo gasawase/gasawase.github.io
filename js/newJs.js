@@ -1,40 +1,45 @@
-﻿const scrollElements = document.querySelectorAll(".js-scroll");
+﻿let mainVideo = document.getElementById("mainPageVideo");
+let int = null;
 
-const elementInView = (el, dividend = 1) => {
-    const elementTop = el.getBoundingClientRect().top;
+window.onscroll = function () {scrollFunction()};
 
-    return (
-        elementTop <=
-        (window.innerHeight || document.documentElement.clientHeight) / dividend
-    );
-};
-
-const elementOutofView = (el) => {
-    const elementTop = el.getBoundingClientRect().top;
-
-    return (
-        elementTop > (window.innerHeight || document.documentElement.clientHeight)
-    );
-};
-
-const displayScrollElement = (element) => {
-    element.classList.add("scrolled");
-};
-
-const hideScrollElement = (element) => {
-    element.classList.remove("scrolled");
-};
-
-const handleScrollAnimation = () => {
-    scrollElements.forEach((el) => {
-        if (elementInView(el, 1.25)) {
-            displayScrollElement(el);
-        } else if (elementOutofView(el)) {
-            hideScrollElement(el)
+function scrollFunction() {
+    if(document.body.scrollTop > 100 || document.documentElement.scrollTop > 100)
+    {
+        /*mainVideo.classList.add("filter-blur");*/
+        int = setInterval(blurring, 10);
+    }
+    else if (document.body.scrollTop > 500 || document.documentElement.scrollTop > 500)
+    {
+        mainVideo.style.position = "static";
+    }
+    else
+    {
+        mainVideo.style.position = "fixed";
+        /*mainVideo.classList.remove("filter-blur");*/
+        int = setInterval(blurring, 10);
         }
-    })
 }
 
-window.addEventListener("scroll", () => {
-    handleScrollAnimation();
-});
+
+let load = 0;
+
+function blurring() {
+load++
+if (load > 99) {
+clearInterval(int);
+}
+mainVideo.style.filter = `blur(${scale(load, 0, 100, 30, 0)}px)`;
+}
+
+function unBlurring() {
+load--
+if (load > 15) {
+clearInterval(int);
+}
+mainVideo.style.filter = `blur(${scale(load, 100, 100, 30, 0)}px)`;
+}
+
+function scale(number, inMin, inMax, outMin, outMax) {
+return (number - inMin) * (outMax - outMin) / (inMax - inMin) + outMin;
+}
