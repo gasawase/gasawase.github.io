@@ -4,29 +4,20 @@
     min-width: 100vw;
     min-height: 100vh;
     object-fit: cover;
-    position: static;
-    top: 100px;
-}
-
-.filter-blur {
-    width: inherit;
-    height: inherit;
-    -o-filter: blur(15px);
-    filter: blur(15px);
-    object-fit: cover;
-}
-/*https://www.youtube.com/watch?v=W5-yEZ7Hv0k*/
-
-body {
-    padding-bottom: 2000px;
-}
-
-.stickyVideo {
-    right: 0;
-    bottom: 0;
-    min-width: 100vw;
-    min-height: 100vh;
-    object-fit: cover;
     position: fixed;
     top: 100px;
+}
+
+body {
+    padding-bottom: 1500px;
+}
+
+.overlay {
+    position: absolute;
+    top: 200px;
+    z-index: 1;
+    background-color: #fff;
+    border-radius: 6px;
+    box-shadow: 0 2px 3px rgb(10 10 10 / 10%), 0 0 0 1px rgb(10 10 10 / 10%);
+    color: #4a4a4a;
 }

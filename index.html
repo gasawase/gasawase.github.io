@@ -36,11 +36,28 @@
     </section>
     <section class="hero main-hero">
         <div class="hero-body">
-            <video autoplay muted loop id="mainPageVideo">
+            <video autoplay muted loop id="mainPageVideo" class="img-blur">
                 <source src="assets/stockFootage.mp4" type="video/mp4">
             </video>
+            <div class="overlay column is-half">
+                <h1>testing</h1>
+            </div>
         </div>
     </section>
 </body>
-<script src="js/newJs.js" type="text/javascript"></script>
+<script src="https://code.jquery.com/jquery-3.6.1.js"></script>
+<script type="text/javascript">
+    $(window).scroll(function(){
+        var scroll = $(window).scrollTop();
+        $(".img-blur").css({
+            filter: "blur(" + ((scroll - 100)/10) + "px"
+        })
+        if ($(window).scrollTop() <= 10)
+        {
+            $(".img-blur").css({
+                filter: "blur 0px"
+            })
+        }
+    })
+</script>
 </html>
