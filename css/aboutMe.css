@@ -1,0 +1,19 @@
+﻿.overlay {
+    position: absolute;
+    z-index: 1;
+    background-color: #fff;
+    border-radius: 6px;
+    box-shadow: 0 2px 3px rgb(10 10 10 / 10%), 0 0 0 1px rgb(10 10 10 / 10%);
+    color: #4a4a4a;
+
+}
+
+.home{
+    background-color: #00A896;
+    height: 1000px;
+}
+
+.aboutMe{
+    background-color: #7bd5e8;
+    height: 1000px;
+}

@@ -1,6 +1,14 @@
-﻿let mainVideo = document.getElementById("mainPageVideo");
-
-window.onscroll(function() {
-    let scroll = window.scrollTop();
-    mainVideo.style.filter = "blur(" + (scroll) + "px"
+﻿const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if(entry.isIntersecting) {
+            document.getElementById("overlay").classList.add("fadeInRight");
+            document.getElementById("overlay").classList.remove("fadeOutRight");
+        }
+        else
+        {
+            document.getElementById("overlay").classList.add("fadeOutRight");
+            document.getElementById("overlay").classList.remove("fadeInRight");
+        }
+    })
+    observer.observe(document.getElementById("container"));
 })

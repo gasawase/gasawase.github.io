@@ -39,25 +39,50 @@
             <video autoplay muted loop id="mainPageVideo" class="img-blur">
                 <source src="assets/stockFootage.mp4" type="video/mp4">
             </video>
-            <div class="overlay column is-half">
-                <h1>testing</h1>
+            <div class="section">
+                <div class="overlay hidden column">
+                    <h1>testing</h1>
+                </div>
             </div>
+
         </div>
     </section>
 </body>
 <script src="https://code.jquery.com/jquery-3.6.1.js"></script>
 <script type="text/javascript">
+    const overlayHeading = document.querySelector(".overlay");
     $(window).scroll(function(){
         var scroll = $(window).scrollTop();
         $(".img-blur").css({
-            filter: "blur(" + ((scroll - 100)/10) + "px"
+            filter: "blur(" + (scroll/100) + "px"
         })
-        if ($(window).scrollTop() <= 10)
+        if ($(window).scrollTop() <= 100)
         {
             $(".img-blur").css({
                 filter: "blur 0px"
             })
         }
     })
+    function navCallback(entries) {
+        if (entries[0].isIntersecting)
+        {
+            overlayHeading.classList.replace("hidden", "fadeInRight");
+            console.log(entries[0].isIntersecting);
+        }
+        else
+        {
+            console.log(entries[0].isIntersecting);
+            overlayHeading.classList.replace("fadeInRight", "hidden");
+        }
+        //overlayHeading.classList.add("fadeInRight",entries[0].isIntersecting);
+        //overlayHeading.classList.remove("fadeInRight",entries[0].isIntersecting);
+        //overlayHeading.classList.toggle("fadeOutRight",entries[0].isIntersecting);
+    }
+    
+    const navOptions = {}
+    
+    const navObs = new IntersectionObserver(navCallback, navOptions);
+    
+    navObs.observe(overlayHeading);
 </script>
 </html>

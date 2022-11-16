@@ -9,15 +9,56 @@
 }
 
 body {
-    padding-bottom: 1500px;
+    padding-bottom: 2149px;
 }
 
 .overlay {
     position: absolute;
-    top: 200px;
+    top: 1500px;
+    width: 75%;
     z-index: 1;
-    background-color: #fff;
+    background-color: #047CB3; 
     border-radius: 6px;
     box-shadow: 0 2px 3px rgb(10 10 10 / 10%), 0 0 0 1px rgb(10 10 10 / 10%);
-    color: #4a4a4a;
+    color: #ffffff;
+    opacity: 70%;
+    
+}
+
+.section{
+    padding: 0rem 30rem;
+}
+
+.fadeInRight {
+    animation: fadeInRight 1s;
+}
+
+.fadeOutRight {
+    animation: fadeOutRight 1.2s;
+}
+
+.hidden {
+    opacity: 0;
+}
+
+@keyframes fadeInRight {
+    0%{
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    75%{
+        opacity: 75%;
+        transform:translateX(0);
+    }
+}
+
+@keyframes fadeOutRight {
+    100%{
+        opacity: 0;
+        transform: translateX(100px);
+    }
+    0%{
+        opacity: 1;
+        transform: translateX(0);
+    }
 }
