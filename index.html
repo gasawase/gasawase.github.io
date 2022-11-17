@@ -9,29 +9,32 @@
 </head>
 <body>
     <section>
-        <nav class="navbar is-fixed-top" role="navigation" aria-label="main navigation">
-            <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
-                <span aria-hidden="true"></span>
-                <span aria-hidden="true"></span>
-                <span aria-hidden="true"></span>
-            </a>
-            <nav class="level navbar-menu">
-                <p class="level-item has-text-centered">
-                    <a>Home</a>
-                </p>
-                <p class="level-item has-text-centered">
-                    <a href="resume.html">Resume</a>
-                </p>
-                <p class="level-item has-text-centered">
-                    <a>Summer Gasaway</a>
-                </p>
-                <p class="level-item has-text-centered">
-                    <a href="projects.html">Projects</a>
-                </p>
-                <p class="level-item has-text-centered">
-                    <a href="aboutMe.html">About Me</a>
-                </p>
-            </nav>
+        <nav class="navbar level is-fixed-top" role="navigation" aria-label="main navigation">
+            <div class="navbar-brand">
+                <div class="navbar-item level-item navbarTitle">
+                    Summer Gasaway
+                </div>
+                <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarLevel">
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                </a>
+            </div>
+
+            <div id="navbarLevel" class="navbar-menu">
+                <a href="" class="navbar-item level-item">
+                    Home
+                </a>
+                <a href="resume.html" class="navbar-item level-item">
+                    Resume
+                </a>
+                <a href="projects.html" class="navbar-item level-item">
+                    Projects
+                </a>
+                <a href="aboutMe.html" class="navbar-item level-item">
+                    About Me
+                </a>
+            </div>
         </nav>
     </section>
     <section class="hero main-hero">
@@ -41,10 +44,19 @@
             </video>
             <div class="section">
                 <div class="overlay hidden column">
-                    <h1>testing</h1>
+                    <div class="overlayTitle">
+                        <h1>Summer Gasaway</h1>
+                    </div>
+                    <div class="overlayDescr">
+                        Game Designer &bull; QA Analyst &bull; Project Lead &bull; Technical Artist
+                    </div>
                 </div>
             </div>
-
+        </div>
+    </section>
+    <section class="container">
+        <div class="hero-body">
+            <h1>area for gallery of projects</h1>
         </div>
     </section>
 </body>
@@ -74,9 +86,6 @@
             console.log(entries[0].isIntersecting);
             overlayHeading.classList.replace("fadeInRight", "hidden");
         }
-        //overlayHeading.classList.add("fadeInRight",entries[0].isIntersecting);
-        //overlayHeading.classList.remove("fadeInRight",entries[0].isIntersecting);
-        //overlayHeading.classList.toggle("fadeOutRight",entries[0].isIntersecting);
     }
     
     const navOptions = {}
@@ -84,5 +93,27 @@
     const navObs = new IntersectionObserver(navCallback, navOptions);
     
     navObs.observe(overlayHeading);
+
+    //////navBurger///////
+    document.addEventListener('DOMContentLoaded', () => {
+
+        // Get all "navbar-burger" elements
+        const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+
+        // Add a click event on each of them
+        $navbarBurgers.forEach( el => {
+            el.addEventListener('click', () => {
+
+                // Get the target from the "data-target" attribute
+                const target = el.dataset.target;
+                const $target = document.getElementById(target);
+
+                // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+                el.classList.toggle('is-active');
+                $target.classList.toggle('is-active');
+
+            });
+        });
+    });
 </script>
 </html>

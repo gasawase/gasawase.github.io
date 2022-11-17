@@ -2,32 +2,58 @@
     right: 0;
     bottom: 0;
     min-width: 100vw;
-    min-height: 100vh;
+    height: 100vh;
     object-fit: cover;
     position: fixed;
     top: 100px;
 }
 
 body {
-    padding-bottom: 2149px;
+    padding-bottom: 95vw;
 }
+
+.section{
+    padding: 0vw 22vw;
+}
+
+.navbar{
+    padding: 1em;
+}
+
+.navbarTitle{
+    font-size: 3vw;
+}
+
+.navbar-menu{
+    font-size: 1vw;
+}
+
 
 .overlay {
     position: absolute;
-    top: 1500px;
-    width: 75%;
+    top: 62vw;
+    width: 76vw;
+    height: 30vw;
     z-index: 1;
     background-color: #047CB3; 
     border-radius: 6px;
     box-shadow: 0 2px 3px rgb(10 10 10 / 10%), 0 0 0 1px rgb(10 10 10 / 10%);
     color: #ffffff;
-    opacity: 70%;
+    opacity: 80%;
+    padding-left: 2vw;
+    padding-bottom: 4vw;
+    padding-top: 5vw;
     
 }
 
-.section{
-    padding: 0rem 30rem;
+.overlayTitle{
+    font-size: 8vw;
 }
+
+.overlayDescr{
+    font-size: 2.6vw;
+}
+
 
 .fadeInRight {
     animation: fadeInRight 1s;
