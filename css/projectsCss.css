@@ -10,26 +10,38 @@
     font-size: 1vw;
 }
 
-.placeholder{
-    width: 23vw;
+.projImg{
+    /*width: 23vw;*/
+    max-width: 23vw;
+    min-width: 23vw;
+}
+
+.projImg:hover{
+    
 }
 
 .projectTop{
-    margin-top: 4em;
+    margin-top: 9em;
 }
 
 .projectBase{
-    padding: 7em;
+    padding: 4em 17em;
     align-items: center;
     display: flex;
     background-color: #9A9FB8;
+    justify-content: space-around;
 }
 
-.projRight{
-    padding-left: 20em;
+.projectBase.top{
+    padding-top: 3em;
 }
 
-.projLeft{
-    padding-right: 6em;
+.projDescrRight{
+    padding-right: 10em;
+    padding-left: 5em;
+}
+
+.projDescrLeft{
+    padding-right: 11em;
     padding-left: 12em;
 }

@@ -37,65 +37,112 @@
             </nav>
         </section>
         
-        <section class="hero projectTop">
-            <div class="hero-body projectBase">
-                <figure class="image placeholder">
+        <section class="projectTop">
+            <div class="projectBase top">
+                <figure class="image projImg">
                     <img src="assets/placeholder.png" alt="PlaceholderImage">
                 </figure>
-                <div class="block projRight">
-                    Project 1
+                <div class="projDescrLeft">
+                    <div class="title">Multiplayer Demo</div>
+                    <div class="subtitle">This is a project I did for my Network Game Development class. It creates a session when a host is selected, tracks the players and their names when they're spawned, networks the animations, locations, and health of the players, and tracks the stats for the enemy.</div>
                 </div>
             </div>
         </section>
-        <section class="hero">
-            <div class="hero-body projectBase">
-                <div class="block projRight">
-                    Project 1
+        <section>
+            <div class="projectBase right">
+                <div class="projDescrRight">
+                    <div class="title">VR Computer Repair</div>
+                    <div class="subtitle">Subtitle</div>
                 </div>
-                <figure class="image placeholder">
-                    <img src="assets/placeholder.png" alt="PlaceholderImage">
-                </figure>
-            </div>
-        </section>
-        <section class="hero">
-            <div class="hero-body projectBase">
-                <figure class="image placeholder">
-                    <img src="assets/placeholder.png" alt="PlaceholderImage">
-                </figure>
-                <div class="block projLeft">
-                    Project 1
-                </div>
-            </div>
-        </section>
-        <section class="hero">
-            <div class="hero-body projectBase">
-                <div class="block projRight">
-                    Project 1
-                </div>
-                <figure class="image placeholder">
+                <figure class="image projImg">
                     <img src="assets/placeholder.png" alt="PlaceholderImage">
                 </figure>
             </div>
         </section>
-        <section class="hero">
-            <div class="hero-body projectBase">
-                <figure class="image placeholder">
+        <section>
+            <div class="projectBase">
+                <figure class="image projImg">
                     <img src="assets/placeholder.png" alt="PlaceholderImage">
                 </figure>
-                <div class="block projLeft">
-                    Project 1
+                <div class="block projDescrLeft">
+                    <div class="title">Hope After Hate: Virtual Reality Experience</div>
+                    <div class="subtitle">Subtitle</div>                
                 </div>
             </div>
         </section>
-        <section class="hero">
-            <div class="hero-body projectBase">
-                <div class="block projRight">
-                    Project 1
+        <section>
+            <div class="projectBase right">
+                <div class="block projDescrRight">
+                    <div class="title">Blood Traveler</div>
+                    <div class="subtitle">Subtitle</div>                       
                 </div>
-                <figure class="image placeholder">
+                <figure class="image projImg">
+                    <img src="assets/placeholder.png" alt="PlaceholderImage">
+                </figure>
+            </div>
+        </section>
+        <section>
+            <div class="projectBase">
+                <figure class="image projImg">
+                    <img src="assets/placeholder.png" alt="PlaceholderImage">
+                </figure>
+                <div class="block projDescrLeft">
+                    <div class="title">Belladonna</div>
+                    <div class="subtitle">Subtitle</div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="projectBase right">
+                <div class="block projDescrRight">
+                    <div class="title">Multiplayer Demo</div>
+                    <div class="subtitle">Subtitle</div>
+                </div>
+                <figure class="image projImg">
                     <img src="assets/placeholder.png" alt="PlaceholderImage">
                 </figure>
             </div>
         </section>
     </body>
+<script type="text/javascript">
+    const projSection = document.querySelector(".projectBase")
+    const projArr = document.querySelectorAll(".projectBase")
+    const varArray = {};
+    const varArrObs = new IntersectionObserver(varArrCallback, varArray);
+    
+    function varArrCallback(entries) {
+        // projArr.forEach()
+        // TODO - when each project is detected/observed, have them fade in or fade out
+        //console.log(entries)
+    }
+    
+    varArrObs.observe(projSection)
+    
+    //////navBurger///////
+    document.addEventListener('DOMContentLoaded', () => {
+
+        // Get all "navbar-burger" elements
+        const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+
+        // Add a click event on each of them
+        $navbarBurgers.forEach( el => {
+            el.addEventListener('click', () => {
+
+                // Get the target from the "data-target" attribute
+                const target = el.dataset.target;
+                const $target = document.getElementById(target);
+
+                // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+                el.classList.toggle('is-active');
+                $target.classList.toggle('is-active');
+
+            });
+        });
+    });
+</script>
 </html>
+
+<!--TODO - make the project descriptions better responsive to mobile or smaller-->
+<!--TODO - add pagination for more projects-->
+<!--TODO - add filters for projects based on personal project vs. work, what it displays/what your role was-->
+<!--TODO - add ability to have the projects be modal so when you click on the projects, in opens in a modal and shows the project video or has a gallery for the project screenshots-->
