@@ -9,7 +9,7 @@
 }
 
 body {
-    padding-bottom: 95vw;
+    padding-bottom: 150vh;
 }
 
 .section{
@@ -31,9 +31,9 @@ body {
 
 .overlay {
     position: absolute;
-    top: 62vw;
+    top: 100vh;
     width: 76vw;
-    height: 30vw;
+    height: 50vh;
     z-index: 1;
     background-color: #047CB3; 
     border-radius: 6px;
@@ -41,8 +41,8 @@ body {
     color: #ffffff;
     opacity: 80%;
     padding-left: 2vw;
-    padding-bottom: 4vw;
-    padding-top: 5vw;
+    padding-bottom: 4vh;
+    padding-top: 5vh;
     
 }
 
