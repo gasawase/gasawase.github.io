@@ -1,0 +1,90 @@
+﻿#mainPageVideo {
+    right: 0;
+    bottom: 0;
+    min-width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    position: fixed;
+    top: 100px;
+}
+
+body {
+    padding-bottom: 150vh;
+}
+
+.section{
+    padding: 0vw 22vw;
+}
+
+.navbar{
+    padding: 1em;
+}
+
+.navbarTitle{
+    font-size: 3vw;
+}
+
+.navbar-menu{
+    font-size: 1vw;
+}
+
+
+.overlay {
+    position: absolute;
+    top: 100vh;
+    width: 76vw;
+    height: 50vh;
+    z-index: 1;
+    background-color: #047CB3; 
+    border-radius: 6px;
+    box-shadow: 0 2px 3px rgb(10 10 10 / 10%), 0 0 0 1px rgb(10 10 10 / 10%);
+    color: #ffffff;
+    opacity: 80%;
+    padding-left: 2vw;
+    padding-bottom: 4vh;
+    padding-top: 5vh;
+    
+}
+
+.overlayTitle{
+    font-size: 8vw;
+}
+
+.overlayDescr{
+    font-size: 2.6vw;
+}
+
+
+.fadeInRight {
+    animation: fadeInRight 1s;
+}
+
+.fadeOutRight {
+    animation: fadeOutRight 1.2s;
+}
+
+.hidden {
+    opacity: 0;
+}
+
+@keyframes fadeInRight {
+    0%{
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    75%{
+        opacity: 75%;
+        transform:translateX(0);
+    }
+}
+
+@keyframes fadeOutRight {
+    100%{
+        opacity: 0;
+        transform: translateX(100px);
+    }
+    0%{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}

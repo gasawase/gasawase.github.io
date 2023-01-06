@@ -1,0 +1,34 @@
+﻿body{
+    height: 100vh;
+}
+
+.navbar{
+    padding: 1em;
+}
+
+.navbarTitle{
+    font-size: 3vw;
+}
+
+.navbar-menu{
+    font-size: 1vw;
+}
+
+.topSection{
+    margin-top: 9em;
+    height: 80vh;
+}
+
+.resume{
+    position: absolute;
+    width: 90%;
+    height: 80vh;
+    margin-left: 5vw;
+    margin-right: 5vw;
+    display: inline-block;
+}
+
+.lastUpdated{
+    font-size: 60%;
+    margin-left: 5vw;
+}

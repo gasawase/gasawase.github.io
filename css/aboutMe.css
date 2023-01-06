@@ -1,0 +1,15 @@
+﻿.navbar{
+    padding: 1em;
+}
+
+.navbarTitle{
+    font-size: 3vw;
+}
+
+.navbar-menu{
+    font-size: 1vw;
+}
+
+.body{
+    margin-top: 20vh;
+}

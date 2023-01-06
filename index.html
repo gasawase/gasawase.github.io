@@ -1,365 +1,117 @@
-<!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
-<html>
-    <head>
-        <title>Summer Gasaway's Portfolio</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel ="stylesheet" id="main" href="css/maincss.css" type="text/css"/>
-        <link href="https://fonts.googleapis.com/css?family=Amiri|Julius+Sans+One|Quattrocento|Comfortaa" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=Baskervville&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.4/css/bulma.min.css">
-        <link rel="stylesheet" href="css/animations.css">
-        <link rel="shortcut icon" type="image/png" href="assets/phoenix logo copy 2.png"/>
-        <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
-        <script src="js/main.js"></script>
-    </head>
-    <body>
-        <section>
-            <nav class="navbar" role="navigation" aria-label="main navigation">
-                <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Summer Gasaway Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.4/css/bulma.min.css">
+    <link rel="stylesheet" href="css/newMainCss.css">
+</head>
+<body>
+    <section>
+        <nav class="navbar level is-fixed-top" role="navigation" aria-label="main navigation">
+            <div class="navbar-brand">
+                <div class="navbar-item level-item navbarTitle">
+                    Summer Gasaway
+                </div>
+                <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarLevel">
                     <span aria-hidden="true"></span>
                     <span aria-hidden="true"></span>
                     <span aria-hidden="true"></span>
                 </a>
-                    <nav class="level navbar-menu" id="navbarBasicExample">
-                            <p class="level-item has-text-centered">
-                                <img src="assets/phoenix%20logo%20copy%202.png" alt="PhoenixLogo" style="height: 60px;">
-                            </p>
-                            <a href="#skillsSec" class="navbar-item level-item has-text-centered">
-                                Proficiencies
-                            </a>
-                            <a class="level-item has-text-centered navbar-item" href="#pastWorksSec">
-                                Inventory
-                            </a>
-                            <a class="level-item has-text-centered navbar-item" href="#aboutMeSec">
-                                Description
-                            </a>
-                            <a href="mailto:summer.gasaway@gmail.com" class="level-item has-text-centered navbar-item">
-                                <span class="button custButton" id="buttButt">Want to Talk?</span>
-                            </a>
-                    </nav>
-                </div>
-            </nav>
-        </section>
-        <button onclick="topFunction()" id="myBtn" class="slideUp" title="Go to top">Top</button>
-            <section class="hero main-hero">
-                <div class="hero-body main-hero-body">
-                    <div class="container is-fluid">
-                        <div class="new-title has-text-centered is-spaced">
-                            Project Lead &bull; Programmer &bull; Technical Designer &bull; QA Analyst
-                        </div>
-                        <img class = "topPicOfMe" src="assets/summerPicture.jpg" alt="Picture of Me">
-                        <div class="new-title has-text-centered">
-                            Summer Gasaway
-                        </div>
+            </div>
+
+            <div id="navbarLevel" class="navbar-menu">
+                <a href="" class="navbar-item level-item">
+                    Home
+                </a>
+                <a href="resume.html" class="navbar-item level-item">
+                    Resume
+                </a>
+                <a href="projects.html" class="navbar-item level-item">
+                    Projects
+                </a>
+<!--                <a href="aboutMe.html" class="navbar-item level-item">
+                    About Me
+                </a>-->
+            </div>
+        </nav>
+    </section>
+    <section class="hero main-hero">
+        <div class="hero-body">
+            <video autoplay muted loop id="mainPageVideo" class="img-blur">
+                <source src="assets/720pOG.mp4" type="video/mp4">
+            </video>
+            <div class="section">
+                <div class="overlay hidden column">
+                    <div class="overlayTitle">
+                        <h1>Summer Gasaway</h1>
+                    </div>
+                    <div class="overlayDescr">
+                        Game Designer &bull; QA Analyst &bull; Project Lead &bull; Technical Artist
                     </div>
                 </div>
-            </section>
+            </div>
+        </div>
+    </section>
+    <section class="container">
+        <div class="hero-body">
+            <!--TODO - add gallery of projects underneath blur video-->
+        </div>
+    </section>
+</body>
+<script src="https://code.jquery.com/jquery-3.6.1.js"></script>
+<script type="text/javascript">
+    const overlayHeading = document.querySelector(".overlay");
+    $(window).scroll(function(){
+        var scroll = $(window).scrollTop();
+        $(".img-blur").css({
+            filter: "blur(" + (scroll/100) + "px"
+        })
+        if ($(window).scrollTop() <= 100)
+        {
+            $(".img-blur").css({
+                filter: "blur 0px"
+            })
+        }
+    })
+    function navCallback(entries) {
+        if (entries[0].isIntersecting)
+        {
+            overlayHeading.classList.replace("hidden", "fadeInRight");
+        }
+        else
+        {
+            overlayHeading.classList.replace("fadeInRight", "hidden");
+        }
+    }
+    
+    const navOptions = {}
+    
+    const navObs = new IntersectionObserver(navCallback, navOptions);
+    
+    navObs.observe(overlayHeading);
 
-            <!-- Skills -->
-            <section class="skills section" id="skillsSec">
-                <p class="technicalSkills has-text-weight-normal">Proficiences</p>
-                <div class="container">
-                    <div class="columns">
-                        <div class="column is-4 is-offset">
-                            <div class="card">
-                                <div class="card-content has-text-centered">
-                                    <div class="content">
-                                        <h3>Languages</h3>
-                                        <ul class="skills-list">
-                                            <li class="list-item">Over the years, I've collected and learned many languages</li>
-                                            <li class="list-item">C#, Python, HTML, CSS, Java, Javascript, Linux Bash, SQL
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-        
-                        <div class="column is-4">
-                            <div class="card">
-                                <div class="card-content has-text-centered">
-                                    <div class="content">
-                                        <h3>Tools</h3>
-                                        <ul class="skills-list">
-                                            <li class="list-item">I've found that certain tools are more useful than others in specific encounters. Here are a few of the game development tools that I'm proficient in:</li>
-                                            <li class="list-item">Maya, Unity, Unreal Engine 4
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+    //////navBurger///////
+    document.addEventListener('DOMContentLoaded', () => {
 
-                        <div class="column is-4">
-                            <div class="card">
-                                <div class="card-content has-text-centered">
-                                    <div class="content">
-                                        <h3>Equipment</h3>
-                                        <ul class="skills-list">
-                                            <li class="list-item">There are other items in my pack that I'm also well acquainted with that may also assist on my adventures</li>
-                                            <li class="list-item">Photoshop, JIRA, Visual Studio, JetBrains Rider, GitHub (App and Bash)
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                    </div>
-                </div>
-            </section>
-            
-            <!-- Past Works "Works" -->
-            <section class="hero pastWorksTop" id="pastWorksSec">
-                <div class="hero-body">
-                        <div class="pastWorksTitle">
-                            Inventory
-                        </div>
-                        <div class="pastWorksExplan">       
-                            <!--this is the explanation-->
-                            For more work, check me out on
-                            <a href="https://github.com/gasawase" target="_blank" class="button gitButt">                           
-                                    <span class="icon">
-                                        <i class="fab fa-github"></i>
-                                    </span>
-                                <span>GitHub!</span>
-                            </a>
-                        </div>
+        // Get all "navbar-burger" elements
+        const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
 
-                    <!--Currently Working on Video Card-->
-                    <div class="columns pastWorkSection">
-                        <div class="column is-5">
-                            <div class="card videoCard WorksVideos">
-                                <div class="card-image">
-                                    <figure class="video-con image is-fullwidth">
-                                        <img width="560" height="315" src="assets/currentlyWorkingOn.png" >
-                                    </figure>
-                                </div>
-                            </div>
-                        </div>
-                        <!--Currently Working on Explanation-->
-                        <div class="column is-5 Explain">
-                            <div class="ExplainHeader">
-                                Currently Working On - Model for Belladonna
-                            </div>
-                            Currently, I'm working on modeling the player character for the game a small team of friends and I have been working on for a few years.
-                            <br><br>
-                            I've modeled this character a number of times over the years but this time, with the help of Synty assets, we've begun more of a solid base. I've begun this model in the similar design of 
-                            Synty assets so I can have custom assets while also being able to stick to the style of the pre-existing assets. I'm going to be incorporating physics into
-                            this character in the form of the braid (making it dynamic when the player moves) and the tail that is going to be coming off the end of the outfit.
-                            <br>
-                            I plan on rigging and painting this character as well. After that, I plan on importing the characters and continue work on the foundational mechanics and controls for the player character.
-                        </div>
-                    </div>
-                    
-                    <!--Coming Soon Walkthrough Video Card-->
-                    <div class="columns pastWorkSection">
-                        <div class="column is-5">
-                            <div class="card videoCard WorksVideos">
-                                <div class="card-image">
-                                    <figure class="video-con image is-fullwidth">
-                                        <img width="560" height="315" src="assets/underConstruction.jpg" >
-                                    </figure>
-                                </div>
-                            </div>
-                        </div>
-                        <!--Portfolio Walkthrough Explanation-->
-                        <div class="column is-5 Explain">
-                            <div class="ExplainHeader">
-                                COMING SOON Portfolio Museum - WebGL Walkthrough
-                            </div>
-                            Here is a WebGL build of my portfolio but in a museum setting.
-                            <br><br>
-                            This section is currently being made as it is a relatively ambitious project and will take time. I am currently modeling
-                            the entirety of the "museum". In the future, I'm going to paint the museum and start filling it with my accomplishments.
-                            I plan on having different sections to display the different aspects of me as a developer such as a Shader wing, a 3D modeling wing, and a 
-                            code-based area. I hope to have some portions interactive such as the ability to move around to different sections and press buttons to make 
-                            scripted events happen and more.
-                        </div>
-                    </div>
+        // Add a click event on each of them
+        $navbarBurgers.forEach( el => {
+            el.addEventListener('click', () => {
 
-                    <div class = "card slideshow-card">
-                        <div class = "testing-slideshow-area">
-                            <div class="slideshow-container">
-                                <div class="mySlides fade">
-                                    <div class="numbertext">1 / 3</div>
-                                    <img class = "slideshow-img" src="assets/underConstruction.jpg" alt = "" style = "height: 100%; width: 100%">
-                                </div>
-                                <div class="mySlides fade">
-                                    <div class="numbertext">2 / 3</div>
-                                    <img class = "slideshow-img" src="assets/underConstruction.jpg" alt = "" style = "height: 100%; width: 100%">
-                                </div>
-                                <div class="mySlides fade">
-                                    <div class="numbertext">3 / 3</div>
-                                    <img class = "slideshow-img" src="assets/currentlyWorkingOn.png" alt = "" style = "height: 100%; width: 100%">
-                                </div>
-                                <br>
-                                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-                                <a class="next" onclick="plusSlides(1)">&#10095;</a>
-                            </div>
-                            <div style="text-align:center">
-                                <span class="dot" onclick="currentSlide(1)"></span>
-                                <span class="dot" onclick="currentSlide(2)"></span>
-                                <span class="dot" onclick="currentSlide(3)"></span>
-                            </div>
-                        </div>                       
-                    </div>
+                // Get the target from the "data-target" attribute
+                const target = el.dataset.target;
+                const $target = document.getElementById(target);
 
-                    
-                    <!--Shader Video Card-->
-                    <div class="columns pastWorkSection">
-                             <div class="column is-5">
-                                <div class="card videoCard WorksVideos">
-                                    <div class="card-image-vimeo">
-                                        <iframe src="https://player.vimeo.com/video/669235774?h=d738e21854&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" 
-                                                allow="autoplay; fullscreen; picture-in-picture" allowfullscreen 
-                                                style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Technical Art Portfolio 1/23/2023">
-                                        </iframe>
-                                        <script src="https://player.vimeo.com/api/player.js"></script>
-                                    </div>
-                                </div>
-                                <br>
-                            </div>
-                            <!--Shader Video Explanation-->
-                            <div class="column is-5 Explain">
-                                <div class="ExplainHeader">
-                                    Shader Examples
-                                </div>
-                                Here is a video displaying the shaders that I've created in my free time using tutorials or even from relative scratch.
-                                <br>
-                                <br>
-                                
-                                The final shader is meant to mimic the "Stealth" ability in <i>Dragon Age: Inquistion</i>.
-                                </div>
-                        </div>
-                    
-                    <!--First Game Video Card-->
-                    <div class="columns pastWorkSection">
-                        <div class="column is-5">
-                            <div class="card videoCard" id="WorksVideos">
-                                <div class="card-image-vimeo">
-                                    <iframe src="https://player.vimeo.com/video/696964499?h=cd1eea42ac&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" 
-                                            allow="autoplay; fullscreen; picture-in-picture" allowfullscreen 
-                                            style="position:absolute;top:0;left:0;width:100%;height:100%;" title="BloodTraveler">
-                                    </iframe>
-                                    <script src="https://player.vimeo.com/api/player.js"></script>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <!--First Game Explanation-->
-                        <div class="column is-6 Explain">
-                            <div class="ExplainHeader">
-                                Blood Traveler
-                            </div>
-                            The first game I created. It follows a character that slips into a portal one day and finds herself
-                            in the body of her future ancestor. She must find her way home using narrative puzzles and platforming.
-                            <br>
-                            <br>
-                            I created the locomotion, animations (using Mixamo), AI behavior and pathing, narrative sequencing,
-                            behaviors, and interactions.
-                            My partner created the story, cinematics, levels, and platforming.
-                            <br>
-                            <br>
-                            Music: Bensound
-                            <br>
-                            Art Assets: Synty Studio
-                        </div>
-                    </div>                    
-                </div>
-            </section>
+                // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+                el.classList.toggle('is-active');
+                $target.classList.toggle('is-active');
 
-            <section class="hero aboutMe" id="aboutMeSec">
-                <div class="hero-body">
-                    <div class="container is-fluid">
-                        <figure>
-                        <img src="assets/cropped bw.jpg" alt="Picture of Me">
-                        </figure>
-                        <div class="aboutMeExplan has-text-centered">
-                            Summer Gasaway - Level 22 Technical Designer
-                            <br>
-                            <br>
-                            <h1>I am currently working for my university's Center for Simulation and Virtual Environments, and can't wait to continue my development journey.</h1>
-                            <h1>Visit me at:
-                                <a href="https://github.com/gasawase" target="_blank" class="button">                          
-                                    <span class="icon">
-                                        <i class="fab fa-github"></i>
-                                    </span>
-                                </a> 
-
-                                <a href="https://www.linkedin.com/in/summer-gasaway-865209175" target="_blank" class="button">                          
-                                    <span class="icon">
-                                        <i class="fab fa-linkedin-in"></i>
-                                    </span>
-                                </a>
-                            </h1>
-                        
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <script>// When the user scrolls down 20px from the top of the document, show the button
-                window.onscroll = function() {scrollFunction()};
-                    
-                function scrollFunction() 
-                {
-                      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) 
-                      {
-                            document.getElementById("myBtn").style.display = "block";
-                      } 
-                      else 
-                      {
-                        document.getElementById("myBtn").style.display = "none";
-                      }
-                }  
-                    // When the user clicks on the button, scroll to the top of the document
-                function topFunction() 
-                {
-                      document.body.scrollTop = 0; // For Safari
-                      document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
-                }
-
-            var slideIndex = 1;
-            showSlides(slideIndex);
-            function plusSlides(n) {
-                showSlides(slideIndex += n);
-            }
-            function currentSlide(n) {
-                showSlides(slideIndex = n);
-            }
-            function showSlides(n) {
-                var i;
-                var slides = document.getElementsByClassName("mySlides");
-                var dots = document.getElementsByClassName("dot");
-                if(n > slides.length) {
-                    slideIndex = 1
-                }
-                if(n < 1) {
-                    slideIndex = slides.length
-                }
-                for(i = 0; i < slides.length; i++) {
-                    slides[i].style.display = "none";
-                }
-                for(i = 0; i < dots.length; i++) {
-                    dots[i].className = dots[i].className.replace(" active", "");
-                }
-                slides[slideIndex - 1].style.display = "block";
-                dots[slideIndex - 1].className += " active";
-            }
-            </script>
-    </body>
-    <footer class="footer content has-text-centered">
-        <a href="mailto:summer.gasaway@gmail.com" class="button is-large footButt" id="buttButt"><strong>Want to Talk?</strong></a>
-            <br> 
-            <div class="thanks">
-                Thanks to <strong>Bulma</strong> for all its help with my code and for teaching me how HTML works and <a href="www.justinaguilar.com/animations/">Justin Aguilar</a> for the animations.
-            </div>   
-    </footer>
+            });
+        });
+    });
+</script>
 </html>
