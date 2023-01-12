@@ -1,11 +1,5 @@
 ﻿#mainPageVideo {
-    right: 0;
-    bottom: 0;
-    min-width: 100vw;
-    height: 100vh;
-    object-fit: cover;
-    position: fixed;
-    top: 100px;
+    /*box-shadow: 0 20px 30px rgb(10 10 10 / 10%), 0 0 0 1px rgb(10 10 10 / 10%);*/
 }
 
 html{
