@@ -8,16 +8,35 @@
     top: 100px;
 }
 
-body {
-    padding-bottom: 150vh;
+html{
+    background-color: #FCF5E5;
 }
 
-.section{
-    padding: 0vw 22vw;
+.title{
+    font-size:calc(20px + 5vw);
 }
+
+.colorView{
+    position: relative;
+    background-color: #f3e9d2;
+    opacity: 80%;
+    box-shadow: 0 2px 3px rgb(10 10 10 / 10%), 0 0 0 1px rgb(10 10 10 / 10%);
+}
+
+.isFluid{
+    margin-left: 5%;
+    margin-right: 5%;
+    max-width: none;
+    width: auto;
+    
+}
+
+
 
 .navbar{
     padding: 1em;
+    background-color: #FAF5EA;
+    box-shadow: 0 2px 3px rgb(10 10 10 / 10%), 0 0 0 1px rgb(10 10 10 / 10%);
 }
 
 .navbarTitle{
@@ -30,30 +49,34 @@ body {
 
 
 .overlay {
-    position: absolute;
-    top: 100vh;
-    width: 76vw;
-    height: 50vh;
-    z-index: 1;
-    background-color: #047CB3; 
+    position: relative;
+    margin-top: 14vh;
+    height: auto;
     border-radius: 6px;
-    box-shadow: 0 2px 3px rgb(10 10 10 / 10%), 0 0 0 1px rgb(10 10 10 / 10%);
-    color: #ffffff;
-    opacity: 80%;
-    padding-left: 2vw;
-    padding-bottom: 4vh;
-    padding-top: 5vh;
+    /*box-shadow: 0 2px 3px rgb(10 10 10 / 10%), 0 0 0 1px rgb(10 10 10 / 10%);*/
+    margin-bottom: 0 !important;
     
 }
 
-.overlayTitle{
-    font-size: 8vw;
+.left-column{
+    
 }
 
-.overlayDescr{
-    font-size: 2.6vw;
+.right-column{
+    background-color: #f3e9d2;
+    opacity: 80%;
 }
 
+.on-top{
+    z-index: 2;
+    width: 2vw;
+    height: 2vh;
+    position: absolute;
+}
+
+.aboutMeIntro{
+    padding: 20px;
+}
 
 .fadeInRight {
     animation: fadeInRight 1s;
