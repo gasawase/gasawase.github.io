@@ -1,13 +1,39 @@
-﻿#mainPageVideo {
+﻿:root {
+    --quattrocento-font: 'Quattrocento Sans', sans-serif;
+    --hind: 'Hind', sans-serif;
+    --josefin-sans: 'Josefin Sans', sans-serif;
+}
+
+
+#mainPageVideo {
     /*box-shadow: 0 20px 30px rgb(10 10 10 / 10%), 0 0 0 1px rgb(10 10 10 / 10%);*/
+    width: auto;
+    
+}
+
+.videoIntro{
+    margin: 1rem;
 }
 
 html{
     background-color: #FCF5E5;
+    font-family: var(--quattrocento-font);
+}
+
+body{
+    font-family: var(--quattrocento-font);
 }
 
 .title{
     font-size:calc(20px + 5vw);
+    font-weight: bold;
+    color: #232323;
+}
+
+.subtitle{
+    font-size:calc(5px + 2vw);
+    font-weight: normal;
+    color: #232323;
 }
 
 .colorView{
