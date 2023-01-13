@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.4/css/bulma.min.css">
     <link rel="stylesheet" href="css/newMainCss.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Quattrocento+Sans|Hind|Josefin+Sans">
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
 </head>
 <body>
     <section>
@@ -32,14 +33,32 @@
                 <a href="projects.html" class="navbar-item level-item">
                     Projects
                 </a>
-<!--                <a href="aboutMe.html" class="navbar-item level-item">
-                    About Me
-                </a>-->
+                <div class="navbar-end">
+                    <div class="navbar-item">
+                        <div class="buttons">
+                            <a href="mailto:summer.gasaway@gmail.com" class="custButton is-rounded is-email">
+                                <span class="icon">
+                                    <i class="fas fa-envelope-square fa-3x" ></i>
+                                </span>
+                            </a>
+                            <a class="custButton is-rounded is-linkedIn">
+                                <span class="icon">
+                                    <i class="fab fa-linkedin fa-3x" ></i>
+                                </span>
+                            </a>
+                            <a class="custButton is-rounded is-github">
+                                <span class="icon">
+                                    <i class="fab fa-github-square fa-3x" ></i>
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </nav>
     </section>
     <section class="topSection">
-        <section class="overlay container columns is-mobile isFluid">
+        <section class="overlay container columns is-mobile isFluid is-vcentered">
     
             <div class="left-column column is-5"> <!-- is-half-touch is-one-quarter-mobile is-one-third-tablet is-half-desktop is-one-third-widescreen is-one-fifth-fullhd-->
                 <div class="videoIntro">
@@ -66,11 +85,58 @@
             </div>
         </section>
     </section>
-    <section class="colorView  is-mobile isFluid">
-        <div>
-            as;ldfka;lsdkfh;alskdfjh
+    <!--<section class="colorView is-mobile isFluid">
+        &lt;!&ndash; Container for the image gallery &ndash;&gt;
+        <div class="container containerMySlides">
+
+            &lt;!&ndash; Full-width images with number text &ndash;&gt;
+            <div class="mySlides">
+                <div class="numbertext">1 / 6</div>
+                <a href="projects.html#multiplayerDemo"><img src="assets/Multiplayer/MultiplayerScreenshot.png"></a>
+                
+            </div>
+
+            <div class="mySlides">
+                <div class="numbertext">2 / 6</div>
+                <img src="assets/vrRepairBadScreenshot.png">
+            </div>
+
+            <div class="mySlides">
+                <div class="numbertext">3 / 6</div>
+                <img src="assets/Memorial_SS_01%20(1).png">
+            </div>
+
+            <div class="mySlides">
+                <div class="numbertext">4 / 6</div>
+                <img src="assets/BloodTravelerSS.png">
+            </div>
+
+            &lt;!&ndash; Next and previous buttons &ndash;&gt;
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+            &lt;!&ndash; Image text &ndash;&gt;
+            <div class="caption-container">
+                <p id="caption"></p>
+            </div>
+
+            &lt;!&ndash; Thumbnail images &ndash;&gt;
+            <div class="row">
+                <div class="column">
+                    <img class="demo cursor" src="assets/Multiplayer/MultiplayerScreenshot.png" style="width:100%" onclick="currentSlide(1)" alt="Multiplayer Coliseum Battle">
+                </div>
+                <div class="column">
+                    <img class="demo cursor" src="assets/vrRepairBadScreenshot.png" style="width:100%" onclick="currentSlide(2)" alt="VR Computer Repair">
+                </div>
+                <div class="column">
+                    <img class="demo cursor" src="assets/Memorial_SS_01%20(1).png" style="width:100%" onclick="currentSlide(3)" alt="Hope After Hate">
+                </div>
+                <div class="column">
+                    <img class="demo cursor" src="assets/BloodTravelerSS.png" style="width:100%" onclick="currentSlide(4)" alt="Blood Traveler">
+                </div>
+            </div>
         </div>
-    </section>
+    </section>--> <!-- this is the gallery of projects at the bottom of the page -->
 </body>
 <footer>
     
@@ -128,5 +194,35 @@
             });
         });
     });
+    let slideIndex = 1;
+    showSlides(slideIndex);
+
+    // Next/previous controls
+    function plusSlides(n) {
+        showSlides(slideIndex += n);
+    }
+
+    // Thumbnail image controls
+    function currentSlide(n) {
+        showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+        let i;
+        let slides = document.getElementsByClassName("mySlides");
+        let dots = document.getElementsByClassName("demo");
+        let captionText = document.getElementById("caption");
+        if (n > slides.length) {slideIndex = 1}
+        if (n < 1) {slideIndex = slides.length}
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex-1].style.display = "block";
+        dots[slideIndex-1].className += " active";
+        captionText.innerHTML = dots[slideIndex-1].alt;
+    }
 </script>
 </html>

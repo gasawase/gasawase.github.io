@@ -4,17 +4,6 @@
     --josefin-sans: 'Josefin Sans', sans-serif;
 }
 
-
-#mainPageVideo {
-    /*box-shadow: 0 20px 30px rgb(10 10 10 / 10%), 0 0 0 1px rgb(10 10 10 / 10%);*/
-    width: auto;
-    
-}
-
-.videoIntro{
-    margin: 1rem;
-}
-
 html{
     background-color: #FCF5E5;
     font-family: var(--quattrocento-font);
@@ -36,22 +25,47 @@ body{
     color: #232323;
 }
 
-.colorView{
+.custButton{
+    margin-right: 0.5rem;
+    margin-bottom: 0.5rem;
+    padding-left: 1em;
+    padding-right: 1em;
+    cursor: pointer;
+    justify-content: center;
+    padding-bottom: calc(0.375em - 1px);
+    padding-top: calc(0.375em - 1px);
+    text-align: center;
+    white-space: nowrap;
+    font-size: 1rem;
+    align-items: center;
+    display: inline-flex;
+    line-height: 1.5;
     position: relative;
-    background-color: #f3e9d2;
-    opacity: 80%;
-    box-shadow: 0 2px 3px rgb(10 10 10 / 10%), 0 0 0 1px rgb(10 10 10 / 10%);
+    vertical-align: top;
 }
 
-.isFluid{
-    margin-left: 5%;
-    margin-right: 5%;
-    max-width: none;
-    width: auto;
-    
+.custButton:hover{
+    -webkit-transition: all 100ms ease-in;
+    -webkit-transform: scale(1.1);
+    -ms-transition: all 100ms ease-in;
+    -ms-transform: scale(1.1);
+    -moz-transition: all 100ms ease-in;
+    -moz-transform: scale(1.1);
+    transition: all 100ms ease-in;
+    transform: scale(1.1);
+    z-index: 99;
 }
 
+.custButton.is-linkedIn{
+    color: #3273dc;
+}
+.custButton.is-github{
+    color: #6e5494;
+}
 
+.custButton.is-email{
+    color: #363636;
+}
 
 .navbar{
     padding: 1em;
@@ -67,6 +81,44 @@ body{
     font-size: 1vw;
 }
 
+a.navbar-item:hover{
+    background-color: #f4ebd6 !important;
+    color: black;
+    -webkit-transition: all 100ms ease-in;
+    -webkit-transform: scale(1.1);
+    -ms-transition: all 100ms ease-in;
+    -ms-transform: scale(1.1);
+    -moz-transition: all 100ms ease-in;
+    -moz-transform: scale(1.1);
+    transition: all 100ms ease-in;
+    transform: scale(1.1);
+    z-index: 99;
+}
+
+#mainPageVideo {
+    /*box-shadow: 0 20px 30px rgb(10 10 10 / 10%), 0 0 0 1px rgb(10 10 10 / 10%);*/
+    width: auto;
+
+}
+
+.videoIntro{
+    /*    margin: 1rem;
+        padding-top: 5%;*/
+}
+
+.colorView{
+    position: relative;
+    background-color: #f4ebd6;
+    box-shadow: 0 2px 3px rgb(10 10 10 / 10%), 0 0 0 1px rgb(10 10 10 / 10%);
+}
+
+.isFluid{
+    margin-left: 5%;
+    margin-right: 5%;
+    max-width: none;
+    width: auto;
+
+}
 
 .overlay {
     position: relative;
@@ -83,8 +135,7 @@ body{
 }
 
 .right-column{
-    background-color: #f3e9d2;
-    opacity: 80%;
+    background-color: #f4ebd6;
 }
 
 .on-top{
@@ -130,4 +181,89 @@ body{
         opacity: 1;
         transform: translateX(0);
     }
+}
+
+.containerMySlides{
+    padding-top: 5%;
+}
+
+/* Hide the images by default */
+.mySlides {
+    display: none;
+}
+
+.mySlides:hover{
+    filter: drop-shadow(10px 10px 5px rgb(10 10 10 / 10%));
+}
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
+    cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 40%;
+    width: auto;
+    padding: 16px;
+    margin-top: -50px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+
+/* Container for image text */
+.caption-container {
+    text-align: center;
+    background-color: #222;
+    padding: 2px 16px;
+    color: white;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Six columns side by side */
+.column {
+    float: left;
+    width: 16.66%;
+}
+
+/* Add a transparency effect for thumnbail images */
+.demo {
+    opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+    opacity: 1;
 }
