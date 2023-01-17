@@ -267,3 +267,19 @@ a.navbar-item:hover{
 .demo:hover {
     opacity: 1;
 }
+
+.mobileTopSection{
+    display: revert;
+    margin-top: 14vh;
+}
+
+.topSection{
+    display: none;
+}
+
+/*
+@media only screen and (max-width: 768px){
+    .mobileTopSection{
+        display: flex;
+    }
+}*/
