@@ -6,12 +6,15 @@
     <title>Summer Gasaway Portfolio</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.4/css/bulma.min.css">
     <link rel="stylesheet" href="css/newMainCss.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Quattrocento+Sans|Hind|Josefin+Sans">
+    <link rel="shortcut icon" href="assets/Summer-copy.ico" type="image/x-icon">
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
 </head>
 <body>
     <section>
         <nav class="navbar level is-fixed-top" role="navigation" aria-label="main navigation">
             <div class="navbar-brand">
-                <div class="navbar-item level-item navbarTitle">
+                <div class="navbar-item level-item navbarTitle is-size-4-mobile">
                     Summer Gasaway
                 </div>
                 <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarLevel">
@@ -31,35 +34,114 @@
                 <a href="projects.html" class="navbar-item level-item">
                     Projects
                 </a>
-<!--                <a href="aboutMe.html" class="navbar-item level-item">
-                    About Me
-                </a>-->
-            </div>
-        </nav>
-    </section>
-    <section class="hero main-hero">
-        <div class="hero-body">
-            <video autoplay muted loop id="mainPageVideo" class="img-blur">
-                <source src="assets/720pOG.mp4" type="video/mp4">
-            </video>
-            <div class="section">
-                <div class="overlay hidden column">
-                    <div class="overlayTitle">
-                        <h1>Summer Gasaway</h1>
-                    </div>
-                    <div class="overlayDescr">
-                        Game Designer &bull; QA Analyst &bull; Project Lead &bull; Technical Artist
+                <div class="navbar-end">
+                    <div class="navbar-item">
+                        <div class="buttons">
+                            <a href="mailto:summer.gasaway@gmail.com" class="custButton is-rounded is-email">
+                                <span class="icon">
+                                    <i class="fas fa-envelope-square fa-3x" ></i>
+                                </span>
+                            </a>
+                            <a class="custButton is-rounded is-linkedIn">
+                                <span class="icon">
+                                    <i class="fab fa-linkedin fa-3x" ></i>
+                                </span>
+                            </a>
+                            <a class="custButton is-rounded is-github">
+                                <span class="icon">
+                                    <i class="fab fa-github-square fa-3x" ></i>
+                                </span>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
+        </nav>
     </section>
-    <section class="container">
-        <div class="hero-body">
-            <!--TODO - add gallery of projects underneath blur video-->
-        </div>
+    <section class="topSection">
+        <section class="overlay container columns is-mobile isFluid is-vcentered">
+    
+            <div class="left-column column is-5"> <!-- is-half-touch is-one-quarter-mobile is-one-third-tablet is-half-desktop is-one-third-widescreen is-one-fifth-fullhd-->
+                <div class="videoIntro">
+                    <video autoplay muted loop id="mainPageVideo">
+                        <source src="assets/720pOG_Cropped.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+<!--            <div class="on-top">
+                <img src="assets/phoenix logo copy 2.png" alt="">
+            </div>-->
+            <div class="column right-column is-7"> <!-- is-half-touch is-three-quarters-mobile is-two-thirds-tablet is-half-desktop is-two-thirds-widescreen is-four-fifths-fullhd -->
+                <div class="content is-small is-size-5-tablet is-size-4-desktop aboutMeIntro has-text-right has-text-left-mobile">
+                    <div class="title">Hi! I'm Summer!</div>
+                    <div class="subtitle">and I like building video games</div>
+                    <p> I am a game designer specializing in player interactions and experiences. Currently, I'm working as a Software Developer in Unity at UCSim | Center for Simulations & Virtual Realities. 
+                        My goal is to always prioritize player experiences and help develop systems that elevate the narrative experiences...or just make sure that the players have fun and get to escape the real 
+                        world for a little while. I want to work towards becoming a Lead Gameplay Designer where I can design unique narrative experiences or a Technical Designer where I can be as much of an asset to my team as I can be.</p>
+                    <p>I've worked with Unity since high school and have been using it daily since I started at UCSim in 2020. There, I am one of 4 developers creating tools, functionality, 
+                        and interactions in AR and VR experiences for internal and external industry partners. I'm never afraid to take initiative and acquire skills our team needs, whether that's understanding
+                    Unity's new networking system or teaching myself shader code.</p>
+                    <p>When I'm not working, I'm likely teaching myself a new language (I'm comfortable in French and am currently working on Korean), reading my next fantasy novel, or DMing my homebrew D&D campaign.</p>
+                </div>
+            </div>
+        </section>
     </section>
+    <!--<section class="colorView is-mobile isFluid">
+        &lt;!&ndash; Container for the image gallery &ndash;&gt;
+        <div class="container containerMySlides">
+
+            &lt;!&ndash; Full-width images with number text &ndash;&gt;
+            <div class="mySlides">
+                <div class="numbertext">1 / 6</div>
+                <a href="projects.html#multiplayerDemo"><img src="assets/Multiplayer/MultiplayerScreenshot.png"></a>
+                
+            </div>
+
+            <div class="mySlides">
+                <div class="numbertext">2 / 6</div>
+                <img src="assets/vrRepairBadScreenshot.png">
+            </div>
+
+            <div class="mySlides">
+                <div class="numbertext">3 / 6</div>
+                <img src="assets/Memorial_SS_01%20(1).png">
+            </div>
+
+            <div class="mySlides">
+                <div class="numbertext">4 / 6</div>
+                <img src="assets/BloodTravelerSS.png">
+            </div>
+
+            &lt;!&ndash; Next and previous buttons &ndash;&gt;
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+            &lt;!&ndash; Image text &ndash;&gt;
+            <div class="caption-container">
+                <p id="caption"></p>
+            </div>
+
+            &lt;!&ndash; Thumbnail images &ndash;&gt;
+            <div class="row">
+                <div class="column">
+                    <img class="demo cursor" src="assets/Multiplayer/MultiplayerScreenshot.png" style="width:100%" onclick="currentSlide(1)" alt="Multiplayer Coliseum Battle">
+                </div>
+                <div class="column">
+                    <img class="demo cursor" src="assets/vrRepairBadScreenshot.png" style="width:100%" onclick="currentSlide(2)" alt="VR Computer Repair">
+                </div>
+                <div class="column">
+                    <img class="demo cursor" src="assets/Memorial_SS_01%20(1).png" style="width:100%" onclick="currentSlide(3)" alt="Hope After Hate">
+                </div>
+                <div class="column">
+                    <img class="demo cursor" src="assets/BloodTravelerSS.png" style="width:100%" onclick="currentSlide(4)" alt="Blood Traveler">
+                </div>
+            </div>
+        </div>
+    </section>--> <!-- this is the gallery of projects at the bottom of the page -->
 </body>
+<footer>
+    
+</footer>
 <script src="https://code.jquery.com/jquery-3.6.1.js"></script>
 <script type="text/javascript">
     const overlayHeading = document.querySelector(".overlay");
@@ -113,5 +195,35 @@
             });
         });
     });
+    let slideIndex = 1;
+    showSlides(slideIndex);
+
+    // Next/previous controls
+    function plusSlides(n) {
+        showSlides(slideIndex += n);
+    }
+
+    // Thumbnail image controls
+    function currentSlide(n) {
+        showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+        let i;
+        let slides = document.getElementsByClassName("mySlides");
+        let dots = document.getElementsByClassName("demo");
+        let captionText = document.getElementById("caption");
+        if (n > slides.length) {slideIndex = 1}
+        if (n < 1) {slideIndex = slides.length}
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex-1].style.display = "block";
+        dots[slideIndex-1].className += " active";
+        captionText.innerHTML = dots[slideIndex-1].alt;
+    }
 </script>
 </html>
