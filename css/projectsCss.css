@@ -13,6 +13,11 @@ body{
     font-family: var(--quattrocento-font);
 }
 
+iframe{
+    height: 350px;
+    width: 700px;
+}
+
 .title{
     font-size:calc(20px + 5vw);
     font-weight: bold;
