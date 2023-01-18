@@ -54,6 +54,8 @@ body{
     transition: all 100ms ease-in;
     transform: scale(1.1);
     z-index: 99;
+    color: white;
+    font-weight: bolder;
 }
 
 .custButton.is-linkedIn{
@@ -125,8 +127,5 @@ a.navbar-item:hover{
         font-size: 4vw;
         align-items: center;
     }
-
-    .topSection{
-        display: none;
-    }
+    
 }

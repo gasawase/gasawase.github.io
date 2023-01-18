@@ -71,6 +71,8 @@ iframe{
     transition: all 100ms ease-in;
     transform: scale(1.1);
     z-index: 99;
+    color: white;
+    font-weight: bolder;
 }
 
 .custButton.is-linkedIn{
@@ -261,6 +263,9 @@ a.navbar-item:hover{
 .mobileVideo{
     height: auto;
     object-fit: fill;
+}
+.mobileView{
+    display: none;
 }
 
 @media only screen and (max-width: 768px){
