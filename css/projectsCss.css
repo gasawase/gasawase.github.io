@@ -222,3 +222,20 @@ a.navbar-item:hover{
 .demo:hover {
     opacity: 1;
 }
+
+@media only screen and (max-width: 768px){
+    .mobileTopSection{
+        display: revert;
+        margin-top: 14vh;
+        box-shadow: 0 2vh 9px 3px rgb(10 10 10 / 30%);
+    }
+
+    .navbar-item{
+        font-size: 4vw;
+        align-items: center;
+    }
+
+    .topSection{
+        display: none;
+    }
+}

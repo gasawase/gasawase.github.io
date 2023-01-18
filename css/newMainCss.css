@@ -13,7 +13,17 @@ body{
     font-family: var(--quattrocento-font);
 }
 
+.mobileContent{
+    
+}
+
 .title{
+    font-size:calc(20px + 5vw);
+    font-weight: bold;
+    color: #232323;
+}
+
+.mobileTitle{
     font-size:calc(20px + 5vw);
     font-weight: bold;
     color: #232323;
@@ -21,6 +31,12 @@ body{
 
 .subtitle{
     font-size:calc(5px + 2vw);
+    font-weight: normal;
+    color: #232323;
+}
+
+.mobileSubtitle{
+    font-size:calc(10px + 2vw);
     font-weight: normal;
     color: #232323;
 }
@@ -54,6 +70,8 @@ body{
     transition: all 100ms ease-in;
     transform: scale(1.1);
     z-index: 99;
+    color: white;
+    font-weight: bolder;
 }
 
 .custButton.is-linkedIn{
@@ -65,6 +83,38 @@ body{
 
 .custButton.is-email{
     color: #363636;
+}
+
+.custButton.cardButton{
+    margin: 0;
+    padding: 1rem;
+}
+
+.is-resume{
+    background-color: #6BAF92;
+    color: white;
+}
+
+.is-projects{
+    background-color: #1a936f;
+    color: white;
+}
+
+.buttonBar{
+    background-color: transparent;
+    align-items: stretch;
+    display: flex;
+}
+
+.buttonItem{
+    align-items: center;
+    display: flex;
+    flex-basis: 0;
+    flex-grow: 1;
+    flex-shrink: 0;
+    justify-content: center;
+    padding: 0.75rem;
+
 }
 
 .navbar{
@@ -81,6 +131,10 @@ body{
     font-size: 1vw;
 }
 
+.navbar-item{
+
+}
+
 a.navbar-item:hover{
     background-color: #f4ebd6 !important;
     color: black;
@@ -95,10 +149,23 @@ a.navbar-item:hover{
     z-index: 99;
 }
 
+/*@media only screen and (max-width: 768px) {
+    .navbar-item{
+        font-size: 2vw;
+    }
+}*/
+
 #mainPageVideo {
     /*box-shadow: 0 20px 30px rgb(10 10 10 / 10%), 0 0 0 1px rgb(10 10 10 / 10%);*/
     width: auto;
 
+}
+
+.image.frontPage{
+    width: 30vw;
+    margin-left: 30vw;
+    margin-right: 30vw;
+    padding-top: 2vh;
 }
 
 .videoIntro{
@@ -266,4 +333,32 @@ a.navbar-item:hover{
 .active,
 .demo:hover {
     opacity: 1;
+}
+
+.mobileTopSection{
+    display: none;
+    margin-top: 14vh;
+    box-shadow: 0 2vh 9px 3px rgb(10 10 10 / 30%);
+}
+
+.topSection{
+    display: revert;
+}
+
+
+@media only screen and (max-width: 768px){
+    .mobileTopSection{
+        display: revert;
+        margin-top: 14vh;
+        box-shadow: 0 2vh 9px 3px rgb(10 10 10 / 30%);
+    }
+    
+    .navbar-item{
+        font-size: 4vw;
+        align-items: center;
+    }
+    
+    .topSection{
+        display: none;
+    }
 }
