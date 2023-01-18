@@ -24,10 +24,22 @@ iframe{
     color: #232323;
 }
 
+.mobileTitle{
+    font-size:calc(9px + 4vw);
+    color: #232323;
+}
+
 .subtitle{
     font-size:calc(5px + 2vw);
     font-weight: normal;
     color: #232323;
+}
+
+.mobileSubtitle{
+    font-size:calc(10px + 2vw);
+    font-weight: normal;
+    color: #232323;
+    padding: .3rem;
 }
 
 .custButton{
@@ -70,6 +82,29 @@ iframe{
 
 .custButton.is-email{
     color: #363636;
+}
+
+.buttonBar{
+    background-color: transparent;
+    align-items: stretch;
+    display: flex;
+}
+
+.buttonItem{
+    align-items: center;
+    display: flex;
+    flex-basis: 0;
+    flex-grow: 1;
+    flex-shrink: 0;
+    justify-content: center;
+    padding: 0.1rem;
+    border-radius: 290486px;
+    border-color: #dbdbdb;
+    border-width: 1px;
+    color: #363636;
+    cursor: pointer;
+    text-align: center;
+    white-space: nowrap;
 }
 
 .navbar{
@@ -223,13 +258,22 @@ a.navbar-item:hover{
     opacity: 1;
 }
 
-@media only screen and (max-width: 768px){
-    .mobileTopSection{
-        display: revert;
-        margin-top: 14vh;
-        box-shadow: 0 2vh 9px 3px rgb(10 10 10 / 30%);
-    }
+.mobileVideo{
+    height: auto;
+    object-fit: fill;
+}
 
+@media only screen and (max-width: 768px){
+    .desktopView{
+        display:none;
+    }
+    .mobileView{
+        display: revert;
+        margin: 14vh 1vw 0 1vw;
+        max-width: none;
+        width: auto;
+        align-content: center;
+    }
     .navbar-item{
         font-size: 4vw;
         align-items: center;
