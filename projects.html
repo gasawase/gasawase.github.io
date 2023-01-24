@@ -2,148 +2,149 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>ProjectsPage</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.4/css/bulma.min.css">
     <link rel="stylesheet" href="css/projectsCss.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Quattrocento+Sans|Hind|Josefin+Sans">
     <link rel="shortcut icon" href="assets/Summer-copy.ico" type="image/x-icon">
     <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
-    </head>
-    <body>
-        <section>
-            <nav class="navbar level is-fixed-top" role="navigation" aria-label="main navigation">
-                <div class="navbar-brand">
-                    <div class="navbar-item level-item navbarTitle is-size-4-mobile">
-                        Summer Gasaway
-                    </div>
-                    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarLevel">
-                        <span aria-hidden="true"></span>
-                        <span aria-hidden="true"></span>
-                        <span aria-hidden="true"></span>
-                    </a>
+</head>
+<body>
+    <section>
+        <nav class="navbar level is-fixed-top" role="navigation" aria-label="main navigation">
+            <div class="navbar-brand">
+                <div class="navbar-item level-item navbarTitle is-size-4-mobile">
+                    Summer Gasaway
                 </div>
-    
-                <div id="navbarLevel" class="navbar-menu">
-                    <a href="index.html" class="navbar-item level-item has-text-centered">
-                        Home
-                    </a>
-                    <a href="resume.html" class="navbar-item level-item has-text-centered">
-                        Resume
-                    </a>
-                    <a href="" class="navbar-item level-item has-text-centered">
-                        Projects
-                    </a>
-                    <div class="navbar-end">
-                        <div class="navbar-item">
-                            <div class="buttons is-centered">
-                                <a href="mailto:summer.gasaway@gmail.com" class="custButton is-email">
-                                    <span class="icon">
-                                        <i class="fas fa-envelope-square fa-3x" ></i>
-                                    </span>
-                                </a>
-                                <a href="https://www.linkedin.com/in/summer-gasaway-865209175/" class="custButton is-linkedIn">
-                                    <span class="icon">
-                                        <i class="fab fa-linkedin fa-3x" ></i>
-                                    </span>
-                                </a>
-                                <a href="https://github.com/gasawase" class="custButton is-github">
-                                    <span class="icon">
-                                        <i class="fab fa-github-square fa-3x" ></i>
-                                    </span>
-                                </a>
-                            </div>
+                <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarLevel">
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                </a>
+            </div>
+
+            <div id="navbarLevel" class="navbar-menu">
+                <a href="index.html" class="navbar-item level-item has-text-centered">
+                    Home
+                </a>
+                <a href="resume.html" class="navbar-item level-item has-text-centered">
+                    Resume
+                </a>
+                <a href="" class="navbar-item level-item has-text-centered">
+                    Projects
+                </a>
+                <div class="navbar-end">
+                    <div class="navbar-item">
+                        <div class="buttons is-centered">
+                            <a href="mailto:summer.gasaway@gmail.com" class="custButton is-email">
+                                <span class="icon">
+                                    <i class="fas fa-envelope-square fa-3x" ></i>
+                                </span>
+                            </a>
+                            <a href="https://www.linkedin.com/in/summer-gasaway-865209175/" class="custButton is-linkedIn">
+                                <span class="icon">
+                                    <i class="fab fa-linkedin fa-3x" ></i>
+                                </span>
+                            </a>
+                            <a href="https://github.com/gasawase" class="custButton is-github">
+                                <span class="icon">
+                                    <i class="fab fa-github-square fa-3x" ></i>
+                                </span>
+                            </a>
                         </div>
                     </div>
                 </div>
-            </nav>
-        </section>
-        <section class="mobileView">
-            <div class="card">
-                <div class="card-content content has-text-centered">
-                    <div class="mobileTitle">Multiplayer Demo</div>
-                    <div>
-                        <figure class="image frontPage">
-                            <img class="is-square" src="assets/Multiplayer/MultiplayerScreenshot.png" alt="Screenshot of Multiplayer Demo">
-                        </figure>
-                    </div>
-                    <div class="buttonBar">
-                        <span class="buttonItem">
-                            <a href="https://github.com/gasawase/MultiplayerDemo" class="button is-rounded">Code</a>
-                        </span>
-                        <span class="buttonItem">
-                            <a href="resume.html" class="button is-rounded" disabled>Play Here!</a>
-                        </span>
-                    </div>
-                    <div class="mobileSubtitle">
-                        This is a multiplayer game using Unity's Netcode for Game Objects and Synty Studio assets where players work together to defeat an enemy in a gladiator ring.
-                        It creates a session when a host is selected, tracks the players, their meshes, and their names when they're spawned,
-                        networks the animations, locations, and health of the players, and tracks the stats for the enemy.
-                    </div>
+            </div>
+        </nav>
+    </section>
+    <section class="mobileView isFluid">
+        <div class="card">
+            <div class="card-content content has-text-centered">
+                <div class="mobileTitle">Multiplayer Demo</div>
+                <div>
+                    <figure class="image frontPage">
+                        <img class="is-square" src="assets/Multiplayer/MultiplayerScreenshot.png" alt="Screenshot of Multiplayer Demo">
+                    </figure>
                 </div>
-                <div class="card-content content has-text-centered">
-                    <div class="mobileTitle">BloodTraveler</div>
-                    <div>
-                        <figure class="image frontPage">
-                            <iframe class="mobileVideo" src="https://www.youtube.com/embed/HYNaYx9K-ao?rel=0&amp;mute=1" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                        </figure>
-                    </div>
-                    <div class="buttonBar">
-                        <!--                        <span class="buttonItem">
-                                                    <a href="resume.html" class="button is-rounded" disabled>Play Here!</a>
-                                                </span>-->
-                    </div>
-                    <div class="mobileSubtitle">
-                        BloodTraveler is a short narrative action RPG using Unreal 4 and assets from Synty Studios. It follows the main character as they fall through a portal through time.
-                        They wake up in the distant future in the body of their ancestor. The player must find a way to get back to their own time before they lose themselves.
-                        It utilizes dialogue trees, cutscenes, AI pathing, quest progression, and item interactions.
-                    </div>
+                <div class="buttonBar">
+                    <span class="buttonItem">
+                        <a href="https://github.com/gasawase/MultiplayerDemo" class="button is-rounded">Code</a>
+                    </span>
+                    <span class="buttonItem">
+                        <a href="resume.html" class="button is-rounded" disabled>Play Here!</a>
+                    </span>
                 </div>
-                <div class="card-content content has-text-centered">
-                    <div class="mobileTitle">Hope After Hate: Virtual Reality Experience</div>
-                    <div>
-                        <figure class="image frontPage">
-                            <img class="is-square" src="assets/Memorial_SS_01 (1).png" alt="Screenshot of Memorial">
-                        </figure>
-                    </div>
-                    <div class="buttonBar">
-                        <span class="buttonItem">
-                            <a href="https://ucsim.uc.edu/index.php/hope-after-hate/" class="button is-rounded">UCSim Website</a>
-                        </span>
-                        <span class="buttonItem">
-                            <a href="resume.html" class="button is-rounded" disabled>Download</a>
-                        </span>
-                    </div>
-                    <div class="mobileSubtitle">
-                        Hope After Hate was one of the first projects I'd worked on for longer than a year and that I saw from its midpoint to the end of the
-                        second deployment. I was first a Software Developer, but eventually was brought on to handle entire scenes. There was even a point
-                        where I was the only one on my team working on it so I had to become well aquainted with how it worked and couldn't rely on my supervisor for help.
-                    </div>
-                </div>
-                <div class="card-content content has-text-centered">
-                    <div class="mobileTitle">RepairBase</div>
-                    <div>
-                        <figure class="image frontPage">
-                            <img class="is-square" src="assets/vrRepairBadScreenshot.png" alt="Screenshot of VRComputerRepair idea">
-                        </figure>
-                    </div>
-                    <div class="buttonBar">
-                        <span class="buttonItem">
-                            <a href="https://github.com/gasawase/RepairBase" class="button is-rounded">Code</a>
-                        </span>
-                        <!--                        <span class="buttonItem">
-                                                    <a href="resume.html" class="button is-rounded" disabled>Play Here!</a>
-                                                </span>-->
-                    </div>
-                    <div class="mobileSubtitle">
-                        For my Senior Design Project, my team and I decided to create a VR Simulation that taught
-                        the user how to fix common laptop issues. I was very familiar with VR simulations as I had been developing them
-                        for two years at that point. I took on the role of Lead Software Developer and Project Manager.
-                    </div>
+                <div class="mobileSubtitle">
+                    This is a multiplayer game using Unity's Netcode for Game Objects and Synty Studio assets where players work together to defeat an enemy in a gladiator ring.
+                    It creates a session when a host is selected, tracks the players, their meshes, and their names when they're spawned,
+                    networks the animations, locations, and health of the players, and tracks the stats for the enemy.
                 </div>
             </div>
+            <div class="card-content content has-text-centered">
+                <div class="mobileTitle">BloodTraveler</div>
+                <div>
+                    <figure class="image frontPage">
+                        <iframe class="mobileVideo" src="https://www.youtube.com/embed/HYNaYx9K-ao?rel=0&amp;mute=1" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </figure>
+                </div>
+                <div class="buttonBar">
+                    <!--                        <span class="buttonItem">
+                                                <a href="resume.html" class="button is-rounded" disabled>Play Here!</a>
+                                            </span>-->
+                </div>
+                <div class="mobileSubtitle">
+                    BloodTraveler is a short narrative action RPG using Unreal 4 and assets from Synty Studios. It follows the main character as they fall through a portal through time.
+                    They wake up in the distant future in the body of their ancestor. The player must find a way to get back to their own time before they lose themselves.
+                    It utilizes dialogue trees, cutscenes, AI pathing, quest progression, and item interactions.
+                </div>
+            </div>
+            <div class="card-content content has-text-centered">
+                <div class="mobileTitle">Hope After Hate: Virtual Reality Experience</div>
+                <div>
+                    <figure class="image frontPage">
+                        <img class="is-square" src="assets/Memorial_SS_01 (1).png" alt="Screenshot of Memorial">
+                    </figure>
+                </div>
+                <div class="buttonBar">
+                    <span class="buttonItem">
+                        <a href="https://ucsim.uc.edu/index.php/hope-after-hate/" class="button is-rounded">UCSim Website</a>
+                    </span>
+                    <span class="buttonItem">
+                        <a href="resume.html" class="button is-rounded" disabled>Download</a>
+                    </span>
+                </div>
+                <div class="mobileSubtitle">
+                    Hope After Hate was one of the first projects I'd worked on for longer than a year and that I saw from its midpoint to the end of the
+                    second deployment. I was first a Software Developer, but eventually was brought on to handle entire scenes. There was even a point
+                    where I was the only one on my team working on it so I had to become well aquainted with how it worked and couldn't rely on my supervisor for help.
+                </div>
+            </div>
+            <div class="card-content content has-text-centered">
+                <div class="mobileTitle">RepairBase</div>
+                <div>
+                    <figure class="image frontPage">
+                        <img class="is-square" src="assets/vrRepairBadScreenshot.png" alt="Screenshot of VRComputerRepair idea">
+                    </figure>
+                </div>
+                <div class="buttonBar">
+                    <span class="buttonItem">
+                        <a href="https://github.com/gasawase/RepairBase" class="button is-rounded">Code</a>
+                    </span>
+                    <!--                        <span class="buttonItem">
+                                                <a href="resume.html" class="button is-rounded" disabled>Play Here!</a>
+                                            </span>-->
+                </div>
+                <div class="mobileSubtitle">
+                    For my Senior Design Project, my team and I decided to create a VR Simulation that taught
+                    the user how to fix common laptop issues. I was very familiar with VR simulations as I had been developing them
+                    for two years at that point. I took on the role of Lead Software Developer and Project Manager.
+                </div>
+            </div>
+        </div>
 
         </section>
-        <section class="desktopView">
+    <section class="desktopView">
             <section class="projectTop">
                 <div class="projectBase top" id="multiplayerDemo">
                     <figure class="image projImg js-modal-trigger" data-target="multiplayerGallery">
@@ -342,7 +343,6 @@
                             </div>-->
             </section>
         </section>
-        
     </body>
 <script type="text/javascript">
     const projSection = document.querySelector(".projectBase")

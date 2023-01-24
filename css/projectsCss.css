@@ -18,6 +18,14 @@ iframe{
     width: 700px;
 }
 
+.isFluid{
+    margin-left: 5%;
+    margin-right: 5%;
+    max-width: none;
+    width: auto;
+
+}
+
 .title{
     font-size:calc(20px + 5vw);
     font-weight: bold;
@@ -273,12 +281,9 @@ a.navbar-item:hover{
 }
 
 @media only screen and (max-width: 768px){
-    .desktopView{
-        display:none;
-    }
     .mobileView{
         display: revert;
-        margin: 14vh 1vw 0 1vw;
+        margin: 14vh 3vw 2vh 3vw;
         max-width: none;
         width: auto;
         align-content: center;
@@ -286,5 +291,8 @@ a.navbar-item:hover{
     .navbar-item{
         font-size: 4vw;
         align-items: center;
+    }
+    .desktopView{
+        display:none;
     }
 }

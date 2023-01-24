@@ -18,7 +18,7 @@ body{
 }
 
 .title{
-    font-size:calc(20px + 5vw);
+    font-size:calc(20px + 7vw);
     font-weight: bold;
     color: #232323;
 }
@@ -30,7 +30,7 @@ body{
 }
 
 .subtitle{
-    font-size:calc(5px + 2vw);
+    font-size:calc(5px + 3vw);
     font-weight: normal;
     color: #232323;
 }
@@ -39,6 +39,10 @@ body{
     font-size:calc(10px + 2vw);
     font-weight: normal;
     color: #232323;
+}
+
+.content{
+    font-size: calc(5px + 3vw);
 }
 
 .custButton{
@@ -52,7 +56,7 @@ body{
     padding-top: calc(0.375em - 1px);
     text-align: center;
     white-space: nowrap;
-    font-size: 1rem;
+    font-size:calc(5px + 2vw);
     align-items: center;
     display: inline-flex;
     line-height: 1.5;
@@ -114,7 +118,6 @@ body{
     flex-shrink: 0;
     justify-content: center;
     padding: 0.75rem;
-
 }
 
 .navbar{
@@ -129,6 +132,11 @@ body{
 
 .navbar-menu{
     font-size: 1vw;
+}
+
+.navbarLevel{
+    align-items: center;
+    justify-content: space-between;
 }
 
 .navbar-item{
@@ -165,7 +173,11 @@ a.navbar-item:hover{
     width: 30vw;
     margin-left: 30vw;
     margin-right: 30vw;
-    padding-top: 2vh;
+    padding-top: 2.5vh;
+}
+
+.image.frontPageDesktop{
+    margin: 1vw 0 1vw 1vw;
 }
 
 .videoIntro{
@@ -175,7 +187,7 @@ a.navbar-item:hover{
 
 .colorView{
     position: relative;
-    background-color: #f4ebd6;
+    /*background-color: #f4ebd6;*/
     box-shadow: 0 2px 3px rgb(10 10 10 / 10%), 0 0 0 1px rgb(10 10 10 / 10%);
 }
 
@@ -202,7 +214,7 @@ a.navbar-item:hover{
 }
 
 .right-column{
-    background-color: #f4ebd6;
+    /*background-color: #f4ebd6;*/
 }
 
 .on-top{
@@ -345,6 +357,11 @@ a.navbar-item:hover{
     display: revert;
 }
 
+@media screen and(min-width: 769px), print {
+    .navbarLevel{
+        display: flex;
+    }
+}
 
 @media only screen and (max-width: 768px){
     .mobileTopSection{
