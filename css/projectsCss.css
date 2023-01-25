@@ -1,148 +1,8 @@
-﻿:root {
-    --quattrocento-font: 'Quattrocento Sans', sans-serif;
-    --hind: 'Hind', sans-serif;
-    --josefin-sans: 'Josefin Sans', sans-serif;
-}
-
-html{
-    background-color: #FCF5E5;
-    font-family: var(--quattrocento-font);
-}
-
-body{
-    font-family: var(--quattrocento-font);
-}
-
-iframe{
-    height: 350px;
-    width: 700px;
-}
-
-.isFluid{
-    margin-left: 5%;
-    margin-right: 5%;
-    max-width: none;
-    width: auto;
-
-}
-
-.title{
-    font-size:calc(20px + 5vw);
+﻿.header{
+    font-size:calc(3px + 4vw);
     font-weight: bold;
     color: #232323;
-}
-
-.mobileTitle{
-    font-size:calc(9px + 4vw);
-    color: #232323;
-}
-
-.subtitle{
-    font-size:calc(5px + 2vw);
-    font-weight: normal;
-    color: #232323;
-}
-
-.mobileSubtitle{
-    font-size:calc(10px + 2vw);
-    font-weight: normal;
-    color: #232323;
-    padding: .3rem;
-}
-
-.custButton{
-    margin-right: 0.5rem;
-    margin-bottom: 0.5rem;
-    padding-left: 1em;
-    padding-right: 1em;
-    cursor: pointer;
-    justify-content: center;
-    padding-bottom: calc(0.375em - 1px);
-    padding-top: calc(0.375em - 1px);
-    text-align: center;
-    white-space: nowrap;
-    font-size: 1rem;
-    align-items: center;
-    display: inline-flex;
-    line-height: 1.5;
-    position: relative;
-    vertical-align: top;
-}
-
-.custButton:hover{
-    -webkit-transition: all 100ms ease-in;
-    -webkit-transform: scale(1.1);
-    -ms-transition: all 100ms ease-in;
-    -ms-transform: scale(1.1);
-    -moz-transition: all 100ms ease-in;
-    -moz-transform: scale(1.1);
-    transition: all 100ms ease-in;
-    transform: scale(1.1);
-    z-index: 99;
-    color: white;
-    font-weight: bolder;
-}
-
-.custButton.is-linkedIn{
-    color: #3273dc;
-}
-.custButton.is-github{
-    color: #6e5494;
-}
-
-.custButton.is-email{
-    color: #363636;
-}
-
-.buttonBar{
-    background-color: transparent;
-    align-items: stretch;
-    display: flex;
-}
-
-.buttonItem{
-    align-items: center;
-    display: flex;
-    flex-basis: 0;
-    flex-grow: 1;
-    flex-shrink: 0;
-    justify-content: center;
-    padding: 0.1rem;
-    border-radius: 290486px;
-    border-color: #dbdbdb;
-    border-width: 1px;
-    color: #363636;
-    cursor: pointer;
-    text-align: center;
-    white-space: nowrap;
-}
-
-.navbar{
-    padding: 1em;
-    background-color: #FAF5EA;
-    box-shadow: 0 2px 3px rgb(10 10 10 / 10%), 0 0 0 1px rgb(10 10 10 / 10%);
-}
-
-.navbarTitle{
-    font-size: 3vw;
-}
-
-.navbar-menu{
-    font-size: 1vw;
-}
-
-a.navbar-item:hover{
-    background-color: #f4ebd6 !important;
-    color: black;
-    -webkit-transition: all 100ms ease-in;
-    -webkit-transform: scale(1.1);
-    -ms-transition: all 100ms ease-in;
-    -ms-transform: scale(1.1);
-    -moz-transition: all 100ms ease-in;
-    -moz-transform: scale(1.1);
-    transition: all 100ms ease-in;
-    transform: scale(1.1);
-    z-index: 99;
+    font-family: var(--quattrocento-font);
 }
 
 .projImg{
@@ -157,6 +17,10 @@ a.navbar-item:hover{
 
 .projectTop{
     margin-top: 16vh;
+}
+
+.projSubtitle{
+    font-size: calc(5px + 2vw);
 }
 
 .projectBase{
@@ -268,31 +132,58 @@ a.navbar-item:hover{
     opacity: 1;
 }
 
+
+
 .mobileVideo{
-    height: auto;
-    object-fit: fill;
+    height: 560px;
+    width: 100%;
 }
 .mobileView{
-    display: none;
+    display: revert;
+    
 }
 
 .desktopView{
-    display: revert;
+    display: none;
 }
 
-@media only screen and (max-width: 768px){
-    .mobileView{
-        display: revert;
-        margin: 14vh 3vw 2vh 3vw;
-        max-width: none;
+/* 768px and smaller*/
+@media only screen and (min-width: 768px)
+{
+    .isFluid{
+        margin-top: 14vh;
+        border-radius: 6px;
+        margin-left: 5%;
+        margin-right: 5%;
+        max-width: 1300px;
+    }
+    
+}
+
+/* 1400px and smaller */ 
+@media screen and (min-width: 1472px)
+{
+
+    .header{
+        font-size: 60px;
+    }
+    
+    .image{
+        width: 1000px;
+    }
+    
+    .projSubtitle{
+        font-size: 31px;
+    }
+    
+}
+
+/*1472px and bigger*/
+@media screen and (max-width: 1472px)
+{
+    .mobileVideo{
+        height: 100px;
+        object-fit: fill;
         width: auto;
-        align-content: center;
-    }
-    .navbar-item{
-        font-size: 4vw;
-        align-items: center;
-    }
-    .desktopView{
-        display:none;
     }
 }

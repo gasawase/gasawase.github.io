@@ -1,0 +1,255 @@
+﻿:root {
+    --quattrocento-font: 'Quattrocento Sans', sans-serif;
+    --hind: 'Hind', sans-serif;
+    --josefin-sans: 'Josefin Sans', sans-serif;
+}
+
+html{
+    background-color: #FCF5E5;
+    font-family: var(--quattrocento-font);
+}
+
+body{
+    font-family: var(--quattrocento-font);
+}
+
+.mobileContent{
+
+}
+
+.title{
+    font-size:calc(20px + 7vw);
+    font-weight: bold;
+    color: #232323;
+    font-family: var(--quattrocento-font);
+}
+
+.mobileTitle{
+    font-size:calc(20px + 5vw);
+    font-weight: bold;
+    color: #232323;
+    font-family: var(--quattrocento-font);
+}
+
+.subtitle{
+    font-size:calc(5px + 3vw);
+    font-weight: normal;
+    color: #232323;
+    font-family: var(--quattrocento-font);
+}
+
+.mobileSubtitle{
+    font-size:calc(10px + 2vw);
+    font-weight: normal;
+    color: #232323;
+    font-family: var(--quattrocento-font);
+}
+
+.content{
+    font-size: calc(5px + 3vw);
+    font-family: var(--quattrocento-font);
+}
+
+.custButton{
+    margin-right: 0.5rem;
+    margin-bottom: 0.5rem;
+    padding-left: 1em;
+    padding-right: 1em;
+    cursor: pointer;
+    justify-content: center;
+    padding-bottom: calc(0.375em - 1px);
+    padding-top: calc(0.375em - 1px);
+    text-align: center;
+    white-space: nowrap;
+    font-size:calc(5px + 2vw);
+    align-items: center;
+    display: inline-flex;
+    line-height: 1.5;
+    position: relative;
+    vertical-align: top;
+    font-family: var(--quattrocento-font);
+}
+
+.navBarButton{
+    margin-right: 0.5rem;
+    margin-bottom: 0.5rem;
+    padding-left: 1em;
+    padding-right: 1em;
+    cursor: pointer;
+    justify-content: center;
+    padding-bottom: calc(0.375em - 1px);
+    padding-top: calc(0.375em - 1px);
+    text-align: center;
+    white-space: nowrap;
+    align-items: center;
+    display: inline-flex;
+    line-height: 1.5;
+    position: relative;
+    vertical-align: top;
+    font-family: var(--quattrocento-font);
+}
+
+.navbarBurger{
+    height: auto;
+}
+
+.custButton:hover{
+    -webkit-transition: all 100ms ease-in;
+    -webkit-transform: scale(1.1);
+    -ms-transition: all 100ms ease-in;
+    -ms-transform: scale(1.1);
+    -moz-transition: all 100ms ease-in;
+    -moz-transform: scale(1.1);
+    transition: all 100ms ease-in;
+    transform: scale(1.1);
+    z-index: 99;
+    color: white;
+    font-weight: bolder;
+}
+
+.navBarButton:hover{
+    -webkit-transition: all 100ms ease-in;
+    -webkit-transform: scale(1.1);
+    -ms-transition: all 100ms ease-in;
+    -ms-transform: scale(1.1);
+    -moz-transition: all 100ms ease-in;
+    -moz-transform: scale(1.1);
+    transition: all 100ms ease-in;
+    transform: scale(1.1);
+    z-index: 99;
+    color: white;
+    font-weight: bolder;
+}
+
+.navBarButton.is-linkedIn{
+    color: #3273dc;
+}
+.navBarButton.is-github{
+    color: #6e5494;
+}
+
+.navBarButton.is-email{
+    color: #363636;
+}
+
+.custButton.cardButton{
+    margin: 0;
+    padding: 1rem;
+}
+
+.is-resume{
+    background-color: #6BAF92;
+    color: white;
+}
+
+.is-projects{
+    background-color: #1a936f;
+    color: white;
+}
+
+.buttonBar{
+    background-color: transparent;
+    align-items: stretch;
+    display: flex;
+}
+
+.buttonItem{
+    align-items: center;
+    display: flex;
+    flex-basis: 0;
+    flex-grow: 1;
+    flex-shrink: 0;
+    justify-content: center;
+    padding: 0.75rem;
+}
+
+.navbar{
+    padding: 1em;
+    background-color: #FAF5EA;
+    box-shadow: 0 2px 3px rgb(10 10 10 / 10%), 0 0 0 1px rgb(10 10 10 / 10%);
+    font-family: var(--quattrocento-font);
+}
+
+.navbarTitle{
+    font-size: 3rem;
+    font-family: var(--quattrocento-font);
+}
+
+.navbar-menu{
+    font-size: 1vw;
+    font-family: var(--quattrocento-font);
+}
+
+.navbarLevel{
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar-item{
+    font-family: var(--quattrocento-font);
+}
+
+.navbarPageTitles{
+    font-size: 20px;
+}
+
+a.navbar-item:hover{
+    background-color: #f4ebd6 !important;
+    color: black;
+    -webkit-transition: all 100ms ease-in;
+    -webkit-transform: scale(1.1);
+    -ms-transition: all 100ms ease-in;
+    -ms-transform: scale(1.1);
+    -moz-transition: all 100ms ease-in;
+    -moz-transform: scale(1.1);
+    transition: all 100ms ease-in;
+    transform: scale(1.1);
+    z-index: 99;
+}
+
+/*limiting sizes on desktop*/
+@media screen and (min-width: 1400px)
+{
+    .title{
+        font-size: 118px;
+    }
+
+    .subtitle{
+        font-size: 50px;
+    }
+
+    .custButton{
+        font-size: 28px;
+    }
+
+    .content{
+        font-size: 45px;
+    }
+
+}
+
+
+/*changing for mobile*/
+
+@media screen and(min-width: 769px), print {
+    .navbarLevel{
+        display: flex;
+    }
+}
+
+@media only screen and (max-width: 768px){
+    .mobileTopSection{
+        display: revert;
+        margin-top: 14vh;
+        box-shadow: 0 2vh 9px 3px rgb(10 10 10 / 30%);
+    }
+
+    .navbar-item{
+        font-size: 4vw;
+        align-items: center;
+    }
+
+    .topSection{
+        display: none;
+    }
+}
