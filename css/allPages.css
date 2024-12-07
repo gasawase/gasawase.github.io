@@ -14,7 +14,7 @@ body{
 }
 
 .mobileContent{
-
+    font-size:calc(10px + 5vw);
 }
 
 .title{
@@ -223,7 +223,7 @@ a.navbar-item:hover{
     }
 
     .content{
-        font-size: 45px;
+        font-size: 30px;
     }
 
 }

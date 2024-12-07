@@ -20,7 +20,7 @@
 }
 
 .projSubtitle{
-    font-size: calc(5px + 2vw);
+    font-size: calc(2px + 2vw);
 }
 
 .projectBase{
@@ -135,7 +135,7 @@
 
 
 .mobileVideo{
-    height: 560px;
+    height: 660px;
     width: 100%;
 }
 .mobileView{
